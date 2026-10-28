@@ -1,0 +1,2258 @@
+<!DOCTYPE html>
+<html lang="vi" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Little Universe ♡ Personal Growth & Language Sanctum</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts with explicit Vietnamese subset support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        coquette: {
+                            pink: '#FCEEF2',
+                            deepPink: '#E8A0BF',
+                            rose: '#BA708A',
+                            lace: '#FFF9F5',
+                            gold: '#D4AF37',
+                            goldLight: '#F7E7B4',
+                            cream: '#FAF0E6',
+                            burgundy: '#4A1D28',
+                            softDark: '#1E1618',
+                            cardDark: '#2A1F23',
+                            charcoal: '#3A2E32'
+                        }
+                    },
+                    fontFamily: {
+                        playfair: ['Playfair Display', 'serif'],
+                        cormorant: ['Cormorant Garamond', 'serif'],
+                        sans: ['Be Vietnam Pro', 'sans-serif'],
+                        script: ['Pinyon Script', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        ::-webkit-scrollbar {
+            width: 7px;
+            height: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(250, 240, 230, 0.5);
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: rgba(30, 22, 24, 0.5);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E8A0BF;
+            border-radius: 999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #BA708A;
+        }
+
+        body.light {
+            background-color: #FAF0E6;
+            background-image: radial-gradient(#E8A0BF 0.6px, transparent 0.6px), radial-gradient(#E8A0BF 0.6px, #FAF0E6 0.6px);
+            background-size: 24px 24px;
+            background-position: 0 0, 12px 12px;
+            color: #3A2E32;
+        }
+        body.dark {
+            background-color: #1A1214;
+            background-image: radial-gradient(#BA708A 0.6px, transparent 0.6px), radial-gradient(#BA708A 0.6px, #1A1214 0.6px);
+            background-size: 24px 24px;
+            background-position: 0 0, 12px 12px;
+            color: #FCEEF2;
+        }
+
+        .royal-border {
+            border: 1px solid #D4AF37;
+            box-shadow: 0 0 0 2px #FFF9F5, 0 4px 15px rgba(212, 175, 55, 0.15);
+        }
+        .dark .royal-border {
+            border: 1px solid #D4AF37;
+            box-shadow: 0 0 0 2px #2A1F23, 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .perspective-1000 { perspective: 1000px; }
+        .transform-style-3d { transform-style: preserve-3d; }
+        .backface-hidden { backface-visibility: hidden; }
+        .rotate-y-180 { transform: rotateY(180deg); }
+
+        .coquette-card {
+            background: rgba(255, 249, 245, 0.94);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(232, 160, 191, 0.4);
+            border-radius: 1.25rem;
+        }
+        .dark .coquette-card {
+            background: rgba(42, 31, 35, 0.94);
+            border: 1px solid rgba(186, 112, 138, 0.3);
+        }
+
+        .modal-bg {
+            background: rgba(26, 18, 20, 0.75);
+            backdrop-filter: blur(6px);
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="light min-h-screen flex flex-col justify-between">
+
+    <!-- TOP HEADER / BRANDING BANNER -->
+    <header class="relative sticky top-0 z-40 bg-coquette-lace/95 dark:bg-coquette-softDark/95 border-b border-coquette-gold/40 shadow-sm transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3 flex flex-wrap items-center justify-between gap-3">
+            
+            <div class="flex items-center gap-3 cursor-pointer" onclick="switchTab('home')">
+                <span class="text-2xl sm:text-3xl">🎀</span>
+                <div>
+                    <span class="font-script text-2xl text-coquette-rose dark:text-coquette-deepPink block -mb-2">Le Petit Univers</span>
+                    <h1 class="font-playfair text-lg sm:text-xl font-bold tracking-wider text-coquette-burgundy dark:text-coquette-pink uppercase flex items-center gap-2">
+                        MY LITTLE UNIVERSE <span class="text-xs text-coquette-gold uppercase font-cormorant tracking-normal">♡ Sanctum</span>
+                    </h1>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2 sm:gap-3">
+                <button onclick="openApiKeyModal()" id="apiStatusBadge" class="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full bg-coquette-pink dark:bg-coquette-cardDark border border-coquette-deepPink/40 text-coquette-burgundy dark:text-coquette-pink hover:scale-105 transition">
+                    <i class="fa-solid fa-wand-magic-sparkles text-coquette-gold"></i>
+                    <span id="apiStatusText" class="font-medium">Cấu Hình Gemini AI</span>
+                </button>
+
+                <button onclick="toggleDarkMode()" class="p-2 rounded-full bg-white/80 dark:bg-coquette-cardDark border border-coquette-deepPink/30 text-coquette-burgundy dark:text-coquette-pink hover:rotate-12 transition" title="Chuyển chế độ Sáng/Tối">
+                    <i id="themeIcon" class="fa-solid fa-moon"></i>
+                </button>
+
+                <button onclick="promptPasscodeLock()" title="Bảo mật nhật ký" class="p-2 rounded-full bg-white/80 dark:bg-coquette-cardDark border border-coquette-deepPink/30 text-coquette-burgundy dark:text-coquette-pink hover:scale-105 transition">
+                    <i id="lockIcon" class="fa-solid fa-lock text-xs"></i>
+                </button>
+
+                <button onclick="exportJSONBackup()" title="Xuất sao lưu JSON" class="p-2 rounded-full bg-white/80 dark:bg-coquette-cardDark border border-coquette-gold/50 text-coquette-burgundy dark:text-coquette-pink hover:bg-coquette-pink transition">
+                    <i class="fa-solid fa-download text-xs"></i>
+                </button>
+                <label title="Nhập sao lưu JSON" class="p-2 rounded-full bg-white/80 dark:bg-coquette-cardDark border border-coquette-gold/50 text-coquette-burgundy dark:text-coquette-pink hover:bg-coquette-pink transition cursor-pointer">
+                    <i class="fa-solid fa-upload text-xs"></i>
+                    <input type="file" accept=".json" class="hidden" onchange="importJSONBackup(event)">
+                </label>
+            </div>
+        </div>
+
+        <nav class="max-w-7xl mx-auto px-4 sm:px-8 pb-2 flex overflow-x-auto no-scrollbar gap-1.5 sm:gap-2 text-xs font-medium">
+            <button onclick="switchTab('home')" id="tab-home" class="nav-btn active-tab flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl whitespace-nowrap transition bg-coquette-burgundy text-white shadow">
+                <i class="fa-solid fa-castle"></i> Trang Chủ
+            </button>
+            <button onclick="switchTab('study')" id="tab-study" class="nav-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl whitespace-nowrap transition bg-white/60 dark:bg-coquette-cardDark text-coquette-burgundy dark:text-coquette-pink hover:bg-coquette-pink">
+                <i class="fa-solid fa-book-bookmark"></i> Học Ngôn Ngữ
+            </button>
+            <button onclick="switchTab('quiz')" id="tab-quiz" class="nav-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl whitespace-nowrap transition bg-white/60 dark:bg-coquette-cardDark text-coquette-burgundy dark:text-coquette-pink hover:bg-coquette-pink">
+                <i class="fa-solid fa-pen-to-square"></i> 📝 Khảo Bài Trắc Nghiệm
+            </button>
+            <button onclick="switchTab('timer')" id="tab-timer" class="nav-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl whitespace-nowrap transition bg-white/60 dark:bg-coquette-cardDark text-coquette-burgundy dark:text-coquette-pink hover:bg-coquette-pink">
+                <i class="fa-solid fa-hourglass-half"></i> Đồng Hồ Học
+            </button>
+            <button onclick="switchTab('goals')" id="tab-goals" class="nav-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl whitespace-nowrap transition bg-white/60 dark:bg-coquette-cardDark text-coquette-burgundy dark:text-coquette-pink hover:bg-coquette-pink">
+                <i class="fa-solid fa-compass"></i> Mục Tiêu & Vision
+            </button>
+            <button onclick="switchTab('habits')" id="tab-habits" class="nav-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl whitespace-nowrap transition bg-white/60 dark:bg-coquette-cardDark text-coquette-burgundy dark:text-coquette-pink hover:bg-coquette-pink">
+                <i class="fa-solid fa-calendar-check"></i> Thói Quen
+            </button>
+            <button onclick="switchTab('journal')" id="tab-journal" class="nav-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl whitespace-nowrap transition bg-white/60 dark:bg-coquette-cardDark text-coquette-burgundy dark:text-coquette-pink hover:bg-coquette-pink">
+                <i class="fa-solid fa-feather-pointed"></i> Nhật Ký
+            </button>
+            <button onclick="switchTab('memories')" id="tab-memories" class="nav-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl whitespace-nowrap transition bg-white/60 dark:bg-coquette-cardDark text-coquette-burgundy dark:text-coquette-pink hover:bg-coquette-pink">
+                <i class="fa-solid fa-heart-pulse"></i> Kỷ Niệm & Sách
+            </button>
+            <button onclick="switchTab('growth')" id="tab-growth" class="nav-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl whitespace-nowrap transition bg-white/60 dark:bg-coquette-cardDark text-coquette-burgundy dark:text-coquette-pink hover:bg-coquette-pink">
+                <i class="fa-solid fa-seedling"></i> Trưởng Thành
+            </button>
+            <button onclick="switchTab('progress')" id="tab-progress" class="nav-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl whitespace-nowrap transition bg-white/60 dark:bg-coquette-cardDark text-coquette-burgundy dark:text-coquette-pink hover:bg-coquette-pink">
+                <i class="fa-solid fa-chart-line"></i> Tổng Quan
+            </button>
+        </nav>
+    </header>
+
+    <!-- MAIN BODY CONTAINER -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-8 py-6 flex-grow w-full">
+
+        <!-- ================= 1. HOME DASHBOARD ================= -->
+        <section id="section-home" class="tab-content space-y-6 block">
+            <div class="coquette-card p-6 sm:p-8 royal-border relative overflow-hidden">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+                    <div class="space-y-2 text-center md:text-left">
+                        <span class="font-script text-3xl sm:text-4xl text-coquette-rose dark:text-coquette-deepPink">Welcome to your little universe. ♡</span>
+                        <h2 class="font-playfair text-xl sm:text-2xl font-bold text-coquette-burgundy dark:text-coquette-pink">
+                            Một ngày nữa để học hỏi, trưởng thành và trở thành phiên bản mà mình mong muốn.
+                        </h2>
+                        <p class="font-cormorant italic text-coquette-rose dark:text-coquette-deepPink/90 text-base">
+                            "Your own world. Your own pace. Your own story." 🌷
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full md:w-auto">
+                        <div class="bg-white/80 dark:bg-coquette-softDark/80 p-3 rounded-2xl border border-coquette-gold/40 text-center">
+                            <span class="text-xs text-coquette-rose font-medium block">Tổng Từ Vựng</span>
+                            <span id="dashTotalWords" class="font-playfair text-xl font-bold text-coquette-burgundy dark:text-coquette-gold">0</span>
+                        </div>
+                        <div class="bg-white/80 dark:bg-coquette-softDark/80 p-3 rounded-2xl border border-coquette-gold/40 text-center">
+                            <span class="text-xs text-coquette-rose font-medium block">Thời Gian Học</span>
+                            <span id="dashTodayStudy" class="font-playfair text-xl font-bold text-coquette-burgundy dark:text-coquette-gold">0p</span>
+                        </div>
+                        <div class="bg-white/80 dark:bg-coquette-softDark/80 p-3 rounded-2xl border border-coquette-gold/40 text-center col-span-2 sm:col-span-1">
+                            <span class="text-xs text-coquette-rose font-medium block">Duy Trì Thói Quen</span>
+                            <span id="dashHabitStreak" class="font-playfair text-xl font-bold text-coquette-burgundy dark:text-coquette-gold">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div onclick="switchTab('study')" class="coquette-card p-5 cursor-pointer hover:-translate-y-1 transition duration-200 text-center group">
+                    <span class="text-3xl block mb-2 group-hover:scale-110 transition">📚</span>
+                    <h3 class="font-playfair font-bold text-sm text-coquette-burgundy dark:text-coquette-pink">Study Academy</h3>
+                    <p class="text-xs text-coquette-rose font-cormorant italic mt-1">HSK 1-4 Trung & IELTS 5.5 Anh</p>
+                </div>
+                <div onclick="switchTab('quiz')" class="coquette-card p-5 cursor-pointer hover:-translate-y-1 transition duration-200 text-center group">
+                    <span class="text-3xl block mb-2 group-hover:scale-110 transition">📝</span>
+                    <h3 class="font-playfair font-bold text-sm text-coquette-burgundy dark:text-coquette-pink">Khảo Bài Trắc Nghiệm</h3>
+                    <p class="text-xs text-coquette-rose font-cormorant italic mt-1">Khảo bài 10, 20, 40 từ/ngày</p>
+                </div>
+                <div onclick="switchTab('timer')" class="coquette-card p-5 cursor-pointer hover:-translate-y-1 transition duration-200 text-center group">
+                    <span class="text-3xl block mb-2 group-hover:scale-110 transition">⏱️</span>
+                    <h3 class="font-playfair font-bold text-sm text-coquette-burgundy dark:text-coquette-pink">Study Timer</h3>
+                    <p class="text-xs text-coquette-rose font-cormorant italic mt-1">Đồng hồ Pomodoro & Bấm giờ</p>
+                </div>
+                <div onclick="switchTab('goals')" class="coquette-card p-5 cursor-pointer hover:-translate-y-1 transition duration-200 text-center group">
+                    <span class="text-3xl block mb-2 group-hover:scale-110 transition">🎯</span>
+                    <h3 class="font-playfair font-bold text-sm text-coquette-burgundy dark:text-coquette-pink">Goals & Vision</h3>
+                    <p class="text-xs text-coquette-rose font-cormorant italic mt-1">Mục tiêu cuộc sống & Vision Board</p>
+                </div>
+                <div onclick="switchTab('habits')" class="coquette-card p-5 cursor-pointer hover:-translate-y-1 transition duration-200 text-center group">
+                    <span class="text-3xl block mb-2 group-hover:scale-110 transition">🌷</span>
+                    <h3 class="font-playfair font-bold text-sm text-coquette-burgundy dark:text-coquette-pink">Habits Tracker</h3>
+                    <p class="text-xs text-coquette-rose font-cormorant italic mt-1">Theo dõi thói quen nhẹ nhàng</p>
+                </div>
+                <div onclick="switchTab('journal')" class="coquette-card p-5 cursor-pointer hover:-translate-y-1 transition duration-200 text-center group">
+                    <span class="text-3xl block mb-2 group-hover:scale-110 transition">📔</span>
+                    <h3 class="font-playfair font-bold text-sm text-coquette-burgundy dark:text-coquette-pink">Journal & Letters</h3>
+                    <p class="text-xs text-coquette-rose font-cormorant italic mt-1">Nhật ký 4 góc nhìn & Thư tương lai</p>
+                </div>
+                <div onclick="switchTab('memories')" class="coquette-card p-5 cursor-pointer hover:-translate-y-1 transition duration-200 text-center group">
+                    <span class="text-3xl block mb-2 group-hover:scale-110 transition">✨</span>
+                    <h3 class="font-playfair font-bold text-sm text-coquette-burgundy dark:text-coquette-pink">Memories & Books</h3>
+                    <p class="text-xs text-coquette-rose font-cormorant italic mt-1">Hộp kỷ niệm & Tủ sách cá nhân</p>
+                </div>
+                <div onclick="switchTab('growth')" class="coquette-card p-5 cursor-pointer hover:-translate-y-1 transition duration-200 text-center group">
+                    <span class="text-3xl block mb-2 group-hover:scale-110 transition">🌱</span>
+                    <h3 class="font-playfair font-bold text-sm text-coquette-burgundy dark:text-coquette-pink">Personal Growth</h3>
+                    <p class="text-xs text-coquette-rose font-cormorant italic mt-1">Dòng thời gian & Kỹ năng sống</p>
+                </div>
+            </div>
+
+            <div class="coquette-card p-6 border-l-4 border-coquette-gold flex items-center justify-between">
+                <div>
+                    <span class="text-xs uppercase font-bold text-coquette-gold tracking-widest block mb-1">Châm ngôn hôm nay</span>
+                    <p id="dailyQuoteText" class="font-cormorant italic text-lg sm:text-xl text-coquette-burgundy dark:text-coquette-pink">
+                        "Elegance is when the inside is as beautiful as the outside."
+                    </p>
+                </div>
+                <button onclick="randomizeQuote()" class="p-2 text-xs text-coquette-rose hover:rotate-180 transition">
+                    <i class="fa-solid fa-arrows-rotate text-base"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- ================= 2. STUDY ACADEMY ================= -->
+        <section id="section-study" class="tab-content space-y-6 hidden">
+            <!-- Academy Language Toggle & Action Buttons -->
+            <div class="coquette-card p-4 flex flex-wrap items-center justify-between gap-3 royal-border">
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="switchAcademyLang('ZH')" id="acadBtnZH" class="px-4 py-2 rounded-xl text-xs font-bold transition bg-coquette-burgundy text-white shadow">
+                        🇨🇳 Chinese Academy (HSK 1-4)
+                    </button>
+                    <button onclick="switchAcademyLang('EN')" id="acadBtnEN" class="px-4 py-2 rounded-xl text-xs font-bold transition bg-white/70 dark:bg-coquette-softDark text-coquette-burgundy dark:text-coquette-pink">
+                        🇬🇧 English Academy (IELTS 5.5)
+                    </button>
+                </div>
+
+                <div class="flex gap-2">
+                    <button onclick="openVocabModal()" class="px-4 py-2 rounded-xl bg-gradient-to-r from-coquette-burgundy to-coquette-rose text-white text-xs font-bold shadow hover:opacity-95 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-plus"></i> Thêm Từ Vựng / AI Auto-Fill
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sub-Category Tabs -->
+            <div class="flex gap-3 border-b border-coquette-deepPink/30 pb-2">
+                <button onclick="switchStudySubCategory('VOCAB')" id="subCatBtnVocab" class="px-5 py-2 rounded-xl text-xs font-bold transition bg-coquette-rose text-white shadow">
+                    📚 Từ Vựng Chuẩn
+                </button>
+                <button onclick="switchStudySubCategory('IDIOM')" id="subCatBtnIdiom" class="px-5 py-2 rounded-xl text-xs font-bold transition bg-white/80 dark:bg-coquette-cardDark text-coquette-burgundy dark:text-coquette-pink hover:bg-coquette-pink">
+                    ✨ Thành Ngữ & Cụm Từ (Idioms/成语)
+                </button>
+            </div>
+
+            <!-- Filters Bar -->
+            <div class="coquette-card p-4 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-3 text-xs">
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Tìm kiếm</label>
+                    <input type="text" id="studySearchInput" oninput="resetPageAndRender()" placeholder="Nhập từ, phiên âm, nghĩa..." class="w-full px-3 py-1.5 rounded-lg bg-white/80 dark:bg-coquette-softDark border border-coquette-deepPink/30">
+                </div>
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Nguồn Dữ Liệu</label>
+                    <select id="filterSourceSelect" onchange="resetPageAndRender()" class="w-full px-3 py-1.5 rounded-lg bg-white/80 dark:bg-coquette-softDark border border-coquette-deepPink/30">
+                        <option value="ALL">Tất cả (Hệ thống + Bạn)</option>
+                        <option value="SYSTEM">Chỉ Hệ Thống [System]</option>
+                        <option value="USER">Do Bạn Thêm [User]</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Cấp độ / Trình độ</label>
+                    <select id="filterLevelSelect" onchange="resetPageAndRender()" class="w-full px-3 py-1.5 rounded-lg bg-white/80 dark:bg-coquette-softDark border border-coquette-deepPink/30">
+                        <option value="ALL">Tất cả cấp độ</option>
+                        <option value="HSK1">HSK 1</option>
+                        <option value="HSK2">HSK 2</option>
+                        <option value="HSK3">HSK 3</option>
+                        <option value="HSK4">HSK 4</option>
+                        <option value="IELTS 5.5">IELTS 5.5 / B1-B2</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Trạng Thái Ghi Nhớ</label>
+                    <select id="filterMemorySelect" onchange="resetPageAndRender()" class="w-full px-3 py-1.5 rounded-lg bg-white/80 dark:bg-coquette-softDark border border-coquette-deepPink/30">
+                        <option value="ALL">Tất cả</option>
+                        <option value="LEARNING">Đang học 📖</option>
+                        <option value="MASTERED">Đã thuộc 🌟</option>
+                    </select>
+                </div>
+                <div class="col-span-2 sm:col-span-4 lg:col-span-1 flex items-end">
+                    <button onclick="clearStudyFilters()" class="w-full py-1.5 rounded-lg bg-coquette-pink dark:bg-coquette-cardDark text-coquette-burgundy dark:text-coquette-pink font-semibold border border-coquette-deepPink/30 hover:bg-coquette-deepPink/20 transition">
+                        Đặt lại bộ lọc
+                    </button>
+                </div>
+            </div>
+
+            <!-- Main Vocab & Practice Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Left: Vocab/Idiom Bank List -->
+                <div class="lg:col-span-2 space-y-4">
+                    <div id="studyVocabList" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Dynamic Vocab/Idiom Cards -->
+                    </div>
+
+                    <!-- Pagination Controls -->
+                    <div id="vocabPaginationBox" class="flex justify-between items-center bg-white/60 dark:bg-coquette-softDark p-3 rounded-xl border border-coquette-deepPink/30 text-xs">
+                        <button onclick="changeVocabPage(-1)" id="btnPrevPage" class="px-3 py-1 rounded-lg bg-white dark:bg-coquette-cardDark border border-coquette-deepPink/30 hover:bg-coquette-pink">Trang Trước</button>
+                        <span id="vocabPageCounter" class="font-cormorant font-bold text-coquette-rose">Trang 1 / 1</span>
+                        <button onclick="changeVocabPage(1)" id="btnNextPage" class="px-3 py-1 rounded-lg bg-white dark:bg-coquette-cardDark border border-coquette-deepPink/30 hover:bg-coquette-pink">Trang Sau</button>
+                    </div>
+                </div>
+
+                <!-- Right: Flashcard Console -->
+                <div class="coquette-card p-6 royal-border flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 id="flashcardConsoleTitle" class="font-playfair font-bold text-sm text-coquette-burgundy dark:text-coquette-pink">🎴 Thẻ Flashcard Từ Vựng</h3>
+                            <button onclick="speakCurrentWord()" class="text-xs px-3 py-1 rounded-lg bg-coquette-pink text-coquette-burgundy font-semibold hover:bg-coquette-deepPink/30 transition">
+                                🔊 Phát âm
+                            </button>
+                        </div>
+
+                        <!-- Card Flip Container -->
+                        <div id="flashcardBox" onclick="flipFlashcardCard()" class="w-full h-72 perspective-1000 cursor-pointer group mb-4">
+                            <div id="flashcardInnerBox" class="relative w-full h-full duration-500 transform-style-3d shadow-md rounded-2xl border-2 border-coquette-gold/40 bg-coquette-lace dark:bg-coquette-softDark flex items-center justify-center p-4 text-center">
+                                <!-- Front -->
+                                <div class="absolute inset-0 backface-hidden flex flex-col items-center justify-center p-4">
+                                    <div class="flex gap-1.5 mb-2">
+                                        <span id="fcLangTag" class="text-[10px] px-2.5 py-0.5 rounded-full bg-coquette-pink text-coquette-burgundy font-bold">HSK 4</span>
+                                        <span id="fcSourceTag" class="text-[10px] px-2 py-0.5 rounded-full bg-coquette-goldLight text-coquette-burgundy font-bold">[System]</span>
+                                    </div>
+                                    <h3 id="fcFrontWord" class="font-playfair text-2xl sm:text-3xl font-bold text-coquette-burgundy dark:text-coquette-pink">--</h3>
+                                    <p id="fcFrontPinyin" class="text-xs text-coquette-rose italic mt-1 font-serif"></p>
+                                    <span class="text-[10px] text-coquette-rose/70 italic mt-4 font-cormorant">Nhấp để lật thẻ xem chi tiết 🌸</span>
+                                </div>
+                                <!-- Back -->
+                                <div class="absolute inset-0 rotate-y-180 backface-hidden flex flex-col items-center justify-center p-4 bg-coquette-pink/30 dark:bg-coquette-cardDark rounded-2xl overflow-y-auto">
+                                    <h4 id="fcBackMeaning" class="font-semibold text-base text-coquette-burgundy dark:text-coquette-pink">--</h4>
+                                    <p id="fcBackExample" class="text-xs text-coquette-charcoal dark:text-coquette-pink/90 italic mt-2 bg-white/70 dark:bg-coquette-softDark/80 p-2.5 rounded-xl max-w-xs border border-coquette-deepPink/20"></p>
+                                    <p id="fcBackExtra" class="text-[10px] text-coquette-rose mt-2 italic font-cormorant"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mb-3">
+                            <button onclick="prevFlashcardItem()" class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-coquette-softDark text-xs font-bold border border-coquette-deepPink/30 hover:bg-coquette-pink">Lùi</button>
+                            <span id="fcCardCounter" class="text-xs font-cormorant font-bold text-coquette-rose">0 / 0</span>
+                            <button onclick="nextFlashcardItem()" class="px-3.5 py-1.5 rounded-xl bg-white dark:bg-coquette-softDark text-xs font-bold border border-coquette-deepPink/30 hover:bg-coquette-pink">Tiếp</button>
+                        </div>
+
+                        <button onclick="toggleCurrentWordMastered()" id="btnToggleMastered" class="w-full py-2 rounded-xl text-xs font-bold border transition border-coquette-gold bg-white dark:bg-coquette-softDark text-coquette-burgundy dark:text-coquette-pink">
+                            🌟 Đánh dấu Đã thuộc
+                        </button>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-coquette-deepPink/20 text-center">
+                        <button onclick="switchTab('quiz')" class="w-full py-2 bg-coquette-burgundy text-white text-xs font-bold rounded-xl hover:bg-coquette-rose transition">
+                            ⚡ Khảo Bài Trắc Nghiệm Ngay
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 3. QUIZ / KHẢO BÀI TRẮC NGHIỆM ================= -->
+        <section id="section-quiz" class="tab-content space-y-6 hidden">
+            <div id="quizConfigBox" class="coquette-card p-6 royal-border max-w-2xl mx-auto space-y-6">
+                <div class="text-center space-y-2">
+                    <span class="text-3xl">📝</span>
+                    <h2 class="font-playfair font-bold text-xl text-coquette-burgundy dark:text-coquette-pink">Khảo Bài Trắc Nghiệm Từ Vựng</h2>
+                    <p class="text-xs text-coquette-rose font-cormorant italic">"Khảo bài 10, 20 hoặc 40 từ/ngày giúp khắc sâu kiến thức ngôn ngữ bền vững ♡"</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                    <div>
+                        <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1.5">1. Nguồn bài khảo</label>
+                        <select id="quizSourceSelect" class="w-full px-3.5 py-2 rounded-xl bg-white/80 dark:bg-coquette-softDark border border-coquette-deepPink/30">
+                            <option value="ZH_VOCAB">🇨🇳 Trung Quốc - Từ vựng HSK 1-4</option>
+                            <option value="ZH_IDIOM">🇨🇳 Trung Quốc - Thành ngữ / 成语 HSK4</option>
+                            <option value="EN_VOCAB">🇬🇧 Tiếng Anh - Từ vựng IELTS 5.5</option>
+                            <option value="EN_IDIOM">🇬🇧 Tiếng Anh - Idioms / Cụm từ IELTS 5.5</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1.5">2. Số lượng câu khảo bài</label>
+                        <select id="quizCountSelect" class="w-full px-3.5 py-2 rounded-xl bg-white/80 dark:bg-coquette-softDark border border-coquette-deepPink/30">
+                            <option value="10">10 câu (Nhanh)</option>
+                            <option value="20">20 câu (Tiêu chuẩn)</option>
+                            <option value="40" selected>40 câu (Khảo bài 40 từ/ngày ✨)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1.5 text-xs">3. Chế độ câu hỏi</label>
+                    <div class="grid grid-cols-2 gap-3 text-xs">
+                        <label class="flex items-center gap-2 p-3 rounded-xl border border-coquette-deepPink/30 bg-white/60 dark:bg-coquette-softDark cursor-pointer">
+                            <input type="radio" name="quizType" value="MCQ" checked class="accent-coquette-burgundy">
+                            <span>Trắc nghiệm (4 lựa chọn A-B-C-D)</span>
+                        </label>
+                        <label class="flex items-center gap-2 p-3 rounded-xl border border-coquette-deepPink/30 bg-white/60 dark:bg-coquette-softDark cursor-pointer">
+                            <input type="radio" name="quizType" value="INPUT" class="accent-coquette-burgundy">
+                            <span>Gõ nghĩa tiếng Việt trực tiếp</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button onclick="startQuizEngine()" class="w-full py-3 bg-coquette-burgundy text-white font-bold text-sm rounded-xl hover:bg-coquette-rose transition shadow-md">
+                    👑 Bắt Đầu Khảo Bài
+                </button>
+            </div>
+
+            <div id="quizRunningBox" class="coquette-card p-6 sm:p-8 royal-border max-w-2xl mx-auto space-y-6 hidden">
+                <div class="flex justify-between items-center border-b border-coquette-deepPink/20 pb-3">
+                    <span id="quizProgressBadge" class="text-xs font-bold px-3 py-1 rounded-full bg-coquette-pink text-coquette-burgundy">Câu 1 / 10</span>
+                    <span id="quizTimerBadge" class="text-xs font-cormorant italic text-coquette-rose">Khảo bài ôn luyện</span>
+                </div>
+
+                <div class="text-center py-4 space-y-2">
+                    <span class="text-xs font-serif text-coquette-rose uppercase tracking-widest block">Hãy chọn nghĩa hoặc phiên âm đúng:</span>
+                    <h3 id="quizQuestionWord" class="font-playfair text-3xl font-bold text-coquette-burgundy dark:text-coquette-pink">--</h3>
+                    <p id="quizQuestionSub" class="text-xs text-coquette-rose italic font-cormorant"></p>
+                </div>
+
+                <div id="quizMcqOptions" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+
+                <div id="quizInputOptions" class="space-y-3 hidden">
+                    <input type="text" id="quizTextInput" placeholder="Nhập nghĩa tiếng Việt của từ..." class="w-full px-4 py-3 rounded-xl bg-white/80 dark:bg-coquette-softDark border border-coquette-deepPink/40 text-sm focus:outline-none">
+                    <button onclick="submitQuizInputAnswer()" class="w-full py-2.5 bg-coquette-burgundy text-white font-bold text-xs rounded-xl hover:bg-coquette-rose transition">Trả lời</button>
+                </div>
+            </div>
+
+            <div id="quizResultBox" class="coquette-card p-8 royal-border max-w-lg mx-auto text-center space-y-6 hidden">
+                <span class="text-5xl block">👑</span>
+                <h3 class="font-playfair font-bold text-2xl text-coquette-burgundy dark:text-coquette-pink">Kết Quả Khảo Bài</h3>
+                <div class="p-6 rounded-2xl bg-coquette-pink/40 dark:bg-coquette-softDark border border-coquette-gold/40 inline-block w-full">
+                    <span id="quizScoreDisplay" class="font-playfair text-4xl font-bold text-coquette-burgundy dark:text-coquette-gold block">0 / 0</span>
+                    <p id="quizScoreMsg" class="text-xs font-cormorant italic text-coquette-rose mt-2">"Xuất sắc! Bạn đã duy trì thói quen khảo bài đều đặn."</p>
+                </div>
+
+                <div class="flex gap-3">
+                    <button onclick="resetQuizToConfig()" class="flex-1 py-2.5 rounded-xl bg-white dark:bg-coquette-softDark border border-coquette-deepPink/30 text-xs font-bold text-coquette-burgundy dark:text-coquette-pink">Khảo Bài Lại</button>
+                    <button onclick="switchTab('study')" class="flex-1 py-2.5 rounded-xl bg-coquette-burgundy text-white text-xs font-bold">Về Kho Từ Vựng</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 4. STUDY TIMER ================= -->
+        <section id="section-timer" class="tab-content space-y-6 hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="lg:col-span-2 coquette-card p-6 sm:p-8 royal-border text-center flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-center gap-2 mb-6">
+                            <button onclick="setTimerType('pomo')" id="btnTimerPomo" class="px-4 py-1.5 rounded-xl text-xs font-bold bg-coquette-burgundy text-white">Pomodoro (25m)</button>
+                            <button onclick="setTimerType('short')" id="btnTimerShort" class="px-4 py-1.5 rounded-xl text-xs font-bold bg-white/60 text-coquette-burgundy dark:text-coquette-pink">Nghỉ ngắn (5m)</button>
+                            <button onclick="setTimerType('stopwatch')" id="btnTimerStopwatch" class="px-4 py-1.5 rounded-xl text-xs font-bold bg-white/60 text-coquette-burgundy dark:text-coquette-pink">Bấm giờ</button>
+                        </div>
+
+                        <div class="my-6">
+                            <div class="inline-block p-8 sm:p-10 rounded-full border-4 border-coquette-gold bg-coquette-lace dark:bg-coquette-softDark shadow-inner">
+                                <span id="timerClockDisplay" class="font-playfair text-5xl sm:text-6xl font-bold text-coquette-burgundy dark:text-coquette-gold tracking-widest">25:00</span>
+                            </div>
+                        </div>
+
+                        <div class="max-w-md mx-auto mb-6">
+                            <input type="text" id="timerSubjectInput" placeholder="Chủ đề phiên học (VD: Luyện viết HSK4, IELTS Reading...)" class="w-full text-center px-4 py-2 rounded-xl text-xs sm:text-sm bg-white/80 dark:bg-coquette-softDark border border-coquette-deepPink/30 focus:outline-none">
+                        </div>
+
+                        <div class="flex justify-center gap-3">
+                            <button onclick="toggleStudyTimer()" id="btnStartTimer" class="px-8 py-2.5 rounded-xl bg-coquette-burgundy text-coquette-lace font-bold text-xs hover:bg-coquette-rose transition shadow">
+                                <i class="fa-solid fa-play mr-1"></i> Bắt đầu
+                            </button>
+                            <button onclick="resetStudyTimer()" class="px-5 py-2.5 rounded-xl bg-white dark:bg-coquette-softDark border border-coquette-deepPink/30 text-coquette-burgundy dark:text-coquette-pink font-bold text-xs">
+                                Đặt lại
+                            </button>
+                        </div>
+                    </div>
+                    <span class="text-xs font-cormorant italic text-coquette-rose mt-6 block">"Focus with grace, achieve with poise."</span>
+                </div>
+
+                <div class="coquette-card p-6 royal-border flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4 border-b border-coquette-deepPink/20 pb-2">
+                            <h3 class="font-playfair font-bold text-sm text-coquette-burgundy dark:text-coquette-pink">📜 Lịch Sử Học Tập</h3>
+                            <button onclick="clearTimerHistoryData()" class="text-[10px] text-coquette-rose hover:underline">Xóa lịch sử</button>
+                        </div>
+                        <div id="timerHistoryLogs" class="space-y-2.5 max-h-80 overflow-y-auto pr-1"></div>
+                    </div>
+                    <div id="timerTotalSum" class="mt-4 pt-2 border-t border-coquette-deepPink/30 text-xs font-bold text-right text-coquette-burgundy dark:text-coquette-gold">
+                        Tổng cộng: 0 phút
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 5. GOALS & VISION BOARD ================= -->
+        <section id="section-goals" class="tab-content space-y-6 hidden">
+            <div class="flex gap-2 mb-4">
+                <button onclick="switchGoalsSubTab('life')" id="subTabGoalLife" class="px-4 py-2 rounded-xl text-xs font-bold bg-coquette-burgundy text-white">🎯 Life Goals</button>
+                <button onclick="switchGoalsSubTab('vision')" id="subTabGoalVision" class="px-4 py-2 rounded-xl text-xs font-bold bg-white/60 dark:bg-coquette-softDark text-coquette-burgundy dark:text-coquette-pink">🖼️ Vision Board</button>
+            </div>
+
+            <div id="areaLifeGoals" class="space-y-6">
+                <div class="coquette-card p-6 royal-border flex flex-wrap justify-between items-center gap-4">
+                    <div>
+                        <h2 class="font-playfair font-bold text-lg text-coquette-burgundy dark:text-coquette-pink">Bản Đồ Mục Tiêu Cuộc Đời</h2>
+                        <p class="text-xs text-coquette-rose font-cormorant italic">Education, Career, Finance, Personal Growth, Reading & Lifestyle</p>
+                    </div>
+                    <button onclick="openGoalModal()" class="px-4 py-2 rounded-xl bg-coquette-burgundy text-white text-xs font-semibold hover:bg-coquette-rose transition">
+                        + Thêm Mục Tiêu Mới
+                    </button>
+                </div>
+
+                <div id="lifeGoalsList" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+            </div>
+
+            <div id="areaVisionBoard" class="space-y-6 hidden">
+                <div class="coquette-card p-6 royal-border flex flex-wrap justify-between items-center gap-4">
+                    <div>
+                        <h2 class="font-playfair font-bold text-lg text-coquette-burgundy dark:text-coquette-pink">My Dream Vision Board</h2>
+                        <p class="text-xs text-coquette-rose font-cormorant italic">Tập hợp hình ảnh & ước mơ của bạn trong tương lai ✨</p>
+                    </div>
+                    <button onclick="openVisionPinModal()" class="px-4 py-2 rounded-xl bg-coquette-burgundy text-white text-xs font-semibold hover:bg-coquette-rose transition">
+                        + Ghim Bức Ảnh Mới
+                    </button>
+                </div>
+
+                <div id="visionPinGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+            </div>
+        </section>
+
+        <!-- ================= 6. HABITS TRACKER ================= -->
+        <section id="section-habits" class="tab-content space-y-6 hidden">
+            <div class="coquette-card p-6 royal-border space-y-6">
+                <div class="flex flex-wrap justify-between items-center gap-4 border-b border-coquette-deepPink/20 pb-4">
+                    <div>
+                        <h2 class="font-playfair font-bold text-lg text-coquette-burgundy dark:text-coquette-pink">🌷 Habit Tracker — Thói Quen Dịu Dàng</h2>
+                        <p class="text-xs text-coquette-rose font-cormorant italic">"Bỏ lỡ một ngày không phải là thất bại. Hãy tiếp tục vào ngày hôm sau ♡"</p>
+                    </div>
+                    <button onclick="openHabitModal()" class="px-4 py-2 rounded-xl bg-coquette-burgundy text-white text-xs font-semibold hover:bg-coquette-rose transition">
+                        + Thêm Thói Quen
+                    </button>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs border-collapse">
+                        <thead>
+                            <tr class="border-b border-coquette-deepPink/30 font-playfair text-coquette-burgundy dark:text-coquette-pink">
+                                <th class="py-2.5 px-3">Thói Quen</th>
+                                <th class="py-2.5 px-1 text-center">T2</th>
+                                <th class="py-2.5 px-1 text-center">T3</th>
+                                <th class="py-2.5 px-1 text-center">T4</th>
+                                <th class="py-2.5 px-1 text-center">T5</th>
+                                <th class="py-2.5 px-1 text-center">T6</th>
+                                <th class="py-2.5 px-1 text-center">T7</th>
+                                <th class="py-2.5 px-1 text-center">CN</th>
+                                <th class="py-2.5 px-3 text-right">Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody id="habitsTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 7. JOURNAL ================= -->
+        <section id="section-journal" class="tab-content space-y-6 hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="lg:col-span-2 coquette-card p-6 royal-border space-y-4">
+                    <div class="flex justify-between items-center border-b border-coquette-deepPink/20 pb-2">
+                        <h3 class="font-playfair font-bold text-lg text-coquette-burgundy dark:text-coquette-pink">📔 Viết Nhật Ký</h3>
+                        <span id="journalDateBadge" class="text-xs font-cormorant italic text-coquette-rose">Today</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                        <div>
+                            <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Loại nhật ký</label>
+                            <select id="journalCategorySelect" onchange="checkJournalCategoryChange()" class="w-full px-3.5 py-2 rounded-xl bg-white/80 dark:bg-coquette-softDark border border-coquette-deepPink/30">
+                                <option value="Daily">Daily Journal</option>
+                                <option value="Reflection">Reflection Journal</option>
+                                <option value="Study">Study Journal</option>
+                                <option value="FutureLetter">Letter to My Future Self 💌</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Tâm trạng (Mood)</label>
+                            <div class="flex gap-2 text-xl" id="journalMoodPicker">
+                                <button onclick="selectJournalMood('🌸')" class="mood-opt p-1 hover:scale-125 transition">🌸</button>
+                                <button onclick="selectJournalMood('🎀')" class="mood-opt p-1 hover:scale-125 transition">🎀</button>
+                                <button onclick="selectJournalMood('☕')" class="mood-opt p-1 hover:scale-125 transition">☕</button>
+                                <button onclick="selectJournalMood('☁️')" class="mood-opt p-1 hover:scale-125 transition">☁️</button>
+                                <button onclick="selectJournalMood('👑')" class="mood-opt p-1 hover:scale-125 transition">👑</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="futureLockDateBox" class="hidden text-xs">
+                        <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Ngày mở thư tương lai</label>
+                        <input type="date" id="journalUnlockDate" class="px-3.5 py-1.5 rounded-xl bg-white/80 dark:bg-coquette-softDark border border-coquette-deepPink/30">
+                    </div>
+
+                    <div>
+                        <input type="text" id="journalTitleInput" placeholder="Tiêu đề nhật ký..." class="w-full px-3.5 py-2 text-sm rounded-xl bg-white/80 dark:bg-coquette-softDark border border-coquette-deepPink/30 focus:outline-none mb-2 font-bold">
+                        <textarea id="journalBodyInput" rows="6" placeholder="Ghi lại suy nghĩ, cảm xúc và bài học của bạn hôm nay..." class="w-full p-3.5 text-xs sm:text-sm rounded-xl bg-white/80 dark:bg-coquette-softDark border border-coquette-deepPink/30 focus:outline-none"></textarea>
+                    </div>
+
+                    <button onclick="saveJournalEntryData()" class="px-5 py-2 rounded-xl bg-coquette-burgundy text-white font-bold text-xs hover:bg-coquette-rose transition shadow">
+                        Lưu Bài Viết
+                    </button>
+                </div>
+
+                <div class="coquette-card p-6 royal-border space-y-4">
+                    <h3 class="font-playfair font-bold text-sm text-coquette-burgundy dark:text-coquette-pink border-b border-coquette-deepPink/20 pb-2">📖 Lịch Sử Nhật Ký</h3>
+                    <div id="journalEntriesList" class="space-y-3 max-h-[450px] overflow-y-auto pr-1"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 8. MEMORIES & BOOKSHELF ================= -->
+        <section id="section-memories" class="tab-content space-y-6 hidden">
+            <div class="flex gap-2 mb-4">
+                <button onclick="switchMemoriesSubTab('scrapbook')" id="subTabMemScrap" class="px-4 py-2 rounded-xl text-xs font-bold bg-coquette-burgundy text-white">✨ Memory Scrapbook</button>
+                <button onclick="switchMemoriesSubTab('bookshelf')" id="subTabMemBook" class="px-4 py-2 rounded-xl text-xs font-bold bg-white/60 dark:bg-coquette-softDark text-coquette-burgundy dark:text-coquette-pink">📚 Bookshelf Tủ Sách</button>
+            </div>
+
+            <div id="areaMemoryScrapbook" class="space-y-6">
+                <div class="coquette-card p-6 royal-border flex justify-between items-center">
+                    <div>
+                        <h2 class="font-playfair font-bold text-lg text-coquette-burgundy dark:text-coquette-pink">Kho Lưu Giữ Kỷ Niệm</h2>
+                        <p class="text-xs text-coquette-rose font-cormorant italic">Lưu giữ những khoảnh khắc đáng nhớ trong cuộc sống 🌷</p>
+                    </div>
+                    <button onclick="openMemoryModal()" class="px-4 py-2 rounded-xl bg-coquette-burgundy text-white text-xs font-semibold hover:bg-coquette-rose transition">
+                        + Thêm Kỷ Niệm
+                    </button>
+                </div>
+
+                <div id="memoriesGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+            </div>
+
+            <div id="areaBookshelf" class="space-y-6 hidden">
+                <div class="coquette-card p-6 royal-border flex justify-between items-center">
+                    <div>
+                        <h2 class="font-playfair font-bold text-lg text-coquette-burgundy dark:text-coquette-pink">Tủ Sách Cá Nhân</h2>
+                        <p class="text-xs text-coquette-rose font-cormorant italic">Want to read, Reading & Completed Books 📖</p>
+                    </div>
+                    <button onclick="openBookModal()" class="px-4 py-2 rounded-xl bg-coquette-burgundy text-white text-xs font-semibold hover:bg-coquette-rose transition">
+                        + Thêm Sách Mới
+                    </button>
+                </div>
+
+                <div id="bookshelfGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            </div>
+        </section>
+
+        <!-- ================= 9. PERSONAL GROWTH ================= -->
+        <section id="section-growth" class="tab-content space-y-6 hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="coquette-card p-6 royal-border space-y-4">
+                    <div class="flex justify-between items-center border-b border-coquette-deepPink/20 pb-2">
+                        <h3 class="font-playfair font-bold text-base text-coquette-burgundy dark:text-coquette-pink">🌱 Skill Growth Matrix</h3>
+                        <button onclick="openSkillModal()" class="text-xs px-3 py-1 bg-coquette-burgundy text-white rounded-lg">+ Thêm Skill</button>
+                    </div>
+                    <div id="skillsList" class="space-y-3 max-h-80 overflow-y-auto pr-1"></div>
+                </div>
+
+                <div class="coquette-card p-6 royal-border space-y-4">
+                    <h3 class="font-playfair font-bold text-base text-coquette-burgundy dark:text-coquette-pink border-b border-coquette-deepPink/20 pb-2">📝 Monthly Reflection</h3>
+                    <form onsubmit="saveMonthlyReflection(event)" class="space-y-3 text-xs">
+                        <div>
+                            <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Điều tự hào nhất tháng này</label>
+                            <input type="text" id="reflProud" class="w-full px-3.5 py-1.5 rounded-lg bg-white/80 dark:bg-coquette-softDark border border-coquette-deepPink/30">
+                        </div>
+                        <div>
+                            <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Bài học rút ra</label>
+                            <input type="text" id="reflLesson" class="w-full px-3.5 py-1.5 rounded-lg bg-white/80 dark:bg-coquette-softDark border border-coquette-deepPink/30">
+                        </div>
+                        <div>
+                            <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Ưu tiên tháng tiếp theo</label>
+                            <input type="text" id="reflPriority" class="w-full px-3.5 py-1.5 rounded-lg bg-white/80 dark:bg-coquette-softDark border border-coquette-deepPink/30">
+                        </div>
+                        <button type="submit" class="px-4 py-2 bg-coquette-burgundy text-white font-bold rounded-xl hover:bg-coquette-rose transition">Lưu Reflection</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="coquette-card p-6 royal-border space-y-4">
+                <div class="flex justify-between items-center border-b border-coquette-deepPink/20 pb-2">
+                    <h3 class="font-playfair font-bold text-base text-coquette-burgundy dark:text-coquette-pink">⏳ My Growth Timeline</h3>
+                    <button onclick="openTimelineModal()" class="text-xs px-3 py-1 bg-coquette-burgundy text-white rounded-lg">+ Thêm Cột Mốc</button>
+                </div>
+                <div id="growthTimelineList" class="relative border-l-2 border-coquette-gold/40 ml-4 space-y-6 py-2"></div>
+            </div>
+        </section>
+
+        <!-- ================= 10. MY PROGRESS & ANALYTICS ================= -->
+        <section id="section-progress" class="tab-content space-y-6 hidden">
+            <div class="coquette-card p-6 royal-border text-center">
+                <h2 class="font-playfair font-bold text-xl text-coquette-burgundy dark:text-coquette-pink">📊 Bức Tranh Tổng Thể Hành Trình</h2>
+                <p class="text-xs text-coquette-rose font-cormorant italic mt-1">Tất cả những nỗ lực thầm lặng của bạn đều được ghi nhận tại đây ♡</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                <div class="coquette-card p-4">
+                    <span class="text-2xl block mb-1">⏱️</span>
+                    <span id="progTotalStudyMin" class="font-playfair text-xl font-bold text-coquette-burgundy dark:text-coquette-gold">0p</span>
+                    <span class="text-[10px] text-coquette-rose block">Tổng giờ học</span>
+                </div>
+                <div class="coquette-card p-4">
+                    <span class="text-2xl block mb-1">📚</span>
+                    <span id="progTotalWords" class="font-playfair text-xl font-bold text-coquette-burgundy dark:text-coquette-gold">0</span>
+                    <span class="text-[10px] text-coquette-rose block">Từ vựng đã lưu</span>
+                </div>
+                <div class="coquette-card p-4">
+                    <span class="text-2xl block mb-1">📖</span>
+                    <span id="progTotalBooks" class="font-playfair text-xl font-bold text-coquette-burgundy dark:text-coquette-gold">0</span>
+                    <span class="text-[10px] text-coquette-rose block">Sách đã đọc</span>
+                </div>
+                <div class="coquette-card p-4">
+                    <span class="text-2xl block mb-1">📔</span>
+                    <span id="progTotalJournals" class="font-playfair text-xl font-bold text-coquette-burgundy dark:text-coquette-gold">0</span>
+                    <span class="text-[10px] text-coquette-rose block">Bài nhật ký</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-coquette-lace dark:bg-coquette-softDark border-t border-coquette-gold/30 py-4 text-center text-xs text-coquette-burgundy dark:text-coquette-pink font-cormorant italic mt-8 transition-colors">
+        My Little Universe ♡ Vintage Royal x Coquette Personal Growth & Language Academy
+    </footer>
+
+    <!-- ================= MODALS ================= -->
+
+    <!-- API KEY SETTINGS MODAL -->
+    <div id="modalApiKey" class="fixed inset-0 modal-bg z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-coquette-lace dark:bg-coquette-softDark border-2 border-coquette-gold rounded-2xl p-6 max-w-md w-full shadow-2xl relative space-y-4">
+            <h3 class="font-playfair font-bold text-lg text-coquette-burgundy dark:text-coquette-pink">🔑 Cấu Hình Gemini AI API Key</h3>
+            <p class="text-xs text-coquette-rose font-cormorant italic">
+                Để sử dụng tính năng **🤖 Tự động tra từ bằng Gemini AI**, bạn cần nhập API Key cá nhân. API Key sẽ được lưu an toàn trong trình duyệt của bạn (LocalStorage).
+            </p>
+            <div>
+                <label class="block text-xs font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Nhập Gemini API Key</label>
+                <input type="password" id="inputApiKeyVal" placeholder="AIzaSy..." class="w-full px-3.5 py-2 text-xs rounded-xl bg-white dark:bg-coquette-cardDark border border-coquette-deepPink/40 focus:outline-none">
+            </div>
+            <div class="p-3 rounded-xl bg-coquette-pink/40 border border-coquette-deepPink/30 text-[11px] text-coquette-burgundy dark:text-coquette-pink space-y-1">
+                <span class="font-bold block">💡 Hướng dẫn lấy key miễn phí:</span>
+                <p>1. Truy cập <a href="https://aistudio.google.com/" target="_blank" class="underline text-coquette-rose">Google AI Studio</a></p>
+                <p>2. Đăng nhập bằng tài khoản Google & nhấn <strong>Create API key</strong></p>
+                <p>3. Dán key vào đây và bấm <strong>Lưu Key</strong>.</p>
+            </div>
+            <div class="flex justify-end gap-2 pt-2">
+                <button onclick="closeApiKeyModal()" class="px-4 py-1.5 text-xs rounded-xl bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200">Hủy</button>
+                <button onclick="saveApiKeyVal()" class="px-4 py-1.5 text-xs rounded-xl bg-coquette-burgundy text-white hover:bg-coquette-rose">Lưu Key</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN VOCAB MODAL WITH INTEGRATED GEMINI AI AUTO-FILL -->
+    <div id="modalVocab" class="fixed inset-0 modal-bg z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-coquette-lace dark:bg-coquette-softDark border-2 border-coquette-gold rounded-2xl p-6 max-w-xl w-full shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4 border-b border-coquette-deepPink/20 pb-2">
+                <h3 class="font-playfair font-bold text-lg text-coquette-burgundy dark:text-coquette-pink" id="vocabModalTitle">Thêm / Sửa Từ Vựng</h3>
+                <button onclick="closeVocabModal()" class="text-coquette-burgundy dark:text-coquette-pink"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+
+            <!-- Error Banner -->
+            <div id="vocabAiErrorBanner" class="p-3 mb-3 rounded-xl bg-red-100 text-red-800 border border-red-300 text-xs hidden flex items-center justify-between">
+                <span id="vocabAiErrorMsg">Lỗi kết nối AI.</span>
+                <button onclick="hideVocabAiError()" class="font-bold text-red-900 ml-2">✕</button>
+            </div>
+
+            <form onsubmit="saveVocabItem(event)" class="space-y-3 text-xs">
+                <!-- Word Entry & AI Auto-fill trigger button -->
+                <div class="bg-coquette-pink/30 dark:bg-coquette-cardDark p-3 rounded-xl border border-coquette-gold/40 space-y-2">
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink">Nhập Từ / Cụm từ gốc *</label>
+                    <div class="flex gap-2">
+                        <input type="text" id="vWord" required placeholder="VD: ambitious hoặc 安排..." class="flex-1 px-3.5 py-2 rounded-xl border border-coquette-deepPink/40 bg-white dark:bg-coquette-softDark focus:outline-none text-sm font-bold">
+                        <button type="button" onclick="triggerGeminiAutoFill()" id="btnAiAutoFill" class="px-4 py-2 bg-gradient-to-r from-coquette-rose to-coquette-gold text-white font-bold rounded-xl hover:opacity-90 transition shadow flex items-center gap-1 whitespace-nowrap">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> 🤖 Tạo bằng AI
+                        </button>
+                    </div>
+                    <span class="text-[10px] text-coquette-rose italic block">Nhập từ rồi nhấn nút AI để tự động điền các thông tin từ điển chuẩn xác bên dưới ✨</span>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    <div>
+                        <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Ngôn ngữ</label>
+                        <select id="vLang" onchange="adjustVocabFormByLang()" class="w-full px-3.5 py-1.5 rounded-lg border border-coquette-deepPink/40 bg-white dark:bg-coquette-cardDark">
+                            <option value="ZH">🇨🇳 Trung Quốc (HSK)</option>
+                            <option value="EN">🇬🇧 Tiếng Anh (IELTS)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Phân loại</label>
+                        <select id="vCat" class="w-full px-3.5 py-1.5 rounded-lg border border-coquette-deepPink/40 bg-white dark:bg-coquette-cardDark">
+                            <option value="VOCAB">📚 Từ vựng chuẩn</option>
+                            <option value="IDIOM">✨ Thành ngữ / Idiom</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Cấp độ / Trình độ</label>
+                        <input type="text" id="vLevel" placeholder="HSK 4 / IELTS 5.5" class="w-full px-3.5 py-1.5 rounded-lg border border-coquette-deepPink/40 bg-white dark:bg-coquette-cardDark">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Pinyin / Phiên âm IPA</label>
+                        <input type="text" id="vPinyin" placeholder="ān pái hoặc /æmˈbɪʃ.əs/" class="w-full px-3.5 py-1.5 rounded-lg border border-coquette-deepPink/40 bg-white dark:bg-coquette-cardDark">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Loại từ (Part of Speech)</label>
+                        <input type="text" id="vPartOfSpeech" placeholder="danh từ, động từ, adj..." class="w-full px-3.5 py-1.5 rounded-lg border border-coquette-deepPink/40 bg-white dark:bg-coquette-cardDark">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Nghĩa tiếng Việt chính *</label>
+                    <input type="text" id="vMeaning" required placeholder="Nghĩa tiếng Việt..." class="w-full px-3.5 py-1.5 rounded-lg border border-coquette-deepPink/40 bg-white dark:bg-coquette-cardDark">
+                </div>
+
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Nghĩa phụ / Nghĩa khác (nếu có)</label>
+                    <input type="text" id="vSecondaryMeanings" placeholder="Các nghĩa thông dụng khác..." class="w-full px-3.5 py-1.5 rounded-lg border border-coquette-deepPink/40 bg-white dark:bg-coquette-cardDark">
+                </div>
+
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Câu ví dụ minh họa & Bản dịch</label>
+                    <textarea id="vExample" rows="2" placeholder="Câu ví dụ + Bản dịch tiếng Việt..." class="w-full p-2.5 rounded-lg border border-coquette-deepPink/40 bg-white dark:bg-coquette-cardDark"></textarea>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Từ đồng nghĩa / Trái nghĩa / Liên quan</label>
+                        <input type="text" id="vRelatedWords" placeholder="Synonyms / Antonyms / Related" class="w-full px-3.5 py-1.5 rounded-lg border border-coquette-deepPink/40 bg-white dark:bg-coquette-cardDark">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Collocations / Cách dùng / Ngữ pháp</label>
+                        <input type="text" id="vNotes" placeholder="Collocations, usage notes..." class="w-full px-3.5 py-1.5 rounded-lg border border-coquette-deepPink/40 bg-white dark:bg-coquette-cardDark">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Chủ đề (Topic)</label>
+                    <input type="text" id="vTopic" placeholder="Work, Daily, Academic..." class="w-full px-3.5 py-1.5 rounded-lg border border-coquette-deepPink/40 bg-white dark:bg-coquette-cardDark">
+                </div>
+
+                <input type="hidden" id="vEditId" value="">
+
+                <div class="flex justify-between items-center pt-3 border-t border-coquette-deepPink/20">
+                    <span class="text-[10px] text-coquette-rose italic font-cormorant">* Bạn có thể sửa bất kỳ ô nào trước khi lưu.</span>
+                    <div class="flex gap-2">
+                        <button type="button" onclick="closeVocabModal()" class="px-4 py-1.5 rounded-xl bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200">Hủy</button>
+                        <button type="submit" class="px-5 py-1.5 rounded-xl bg-coquette-burgundy text-white font-bold hover:bg-coquette-rose transition">💾 Lưu Từ Vựng</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- GOAL MODAL -->
+    <div id="modalGoal" class="fixed inset-0 modal-bg z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-coquette-lace dark:bg-coquette-softDark border-2 border-coquette-gold rounded-2xl p-6 max-w-md w-full shadow-2xl relative">
+            <h3 class="font-playfair font-bold text-lg text-coquette-burgundy dark:text-coquette-pink mb-3">Thêm Mục Tiêu</h3>
+            <form onsubmit="saveGoalItem(event)" class="space-y-3 text-xs">
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Lĩnh vực</label>
+                    <select id="gCat" class="w-full px-3.5 py-1.5 rounded-lg bg-white dark:bg-coquette-cardDark border border-coquette-deepPink/40">
+                        <option value="Education">🎓 Education</option>
+                        <option value="Career">💼 Career</option>
+                        <option value="Finance">💰 Finance</option>
+                        <option value="Personal">🌱 Personal Growth</option>
+                        <option value="Reading">📚 Reading</option>
+                        <option value="Lifestyle">🌷 Lifestyle</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Tên mục tiêu *</label>
+                    <input type="text" id="gTitle" required placeholder="Mục tiêu..." class="w-full px-3.5 py-1.5 rounded-lg bg-white dark:bg-coquette-cardDark border border-coquette-deepPink/40">
+                </div>
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Lý do đạt được</label>
+                    <input type="text" id="gReason" placeholder="Why..." class="w-full px-3.5 py-1.5 rounded-lg bg-white dark:bg-coquette-cardDark border border-coquette-deepPink/40">
+                </div>
+                <div class="flex justify-end gap-2 pt-2">
+                    <button type="button" onclick="closeGoalModal()" class="px-4 py-1.5 rounded-xl bg-gray-200 text-gray-700">Hủy</button>
+                    <button type="submit" class="px-4 py-1.5 rounded-xl bg-coquette-burgundy text-white">Lưu Goal</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- HABIT MODAL -->
+    <div id="modalHabit" class="fixed inset-0 modal-bg z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-coquette-lace dark:bg-coquette-softDark border-2 border-coquette-gold rounded-2xl p-6 max-w-md w-full shadow-2xl relative">
+            <h3 class="font-playfair font-bold text-lg text-coquette-burgundy dark:text-coquette-pink mb-3">Thêm Thói Quen Mới</h3>
+            <form onsubmit="saveHabitItem(event)" class="space-y-3 text-xs">
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Tên thói quen *</label>
+                    <input type="text" id="hTitle" required placeholder="VD: Đọc sách 20 phút..." class="w-full px-3.5 py-1.5 rounded-lg bg-white dark:bg-coquette-cardDark border border-coquette-deepPink/40">
+                </div>
+                <div class="flex justify-end gap-2 pt-2">
+                    <button type="button" onclick="closeHabitModal()" class="px-4 py-1.5 rounded-xl bg-gray-200 text-gray-700">Hủy</button>
+                    <button type="submit" class="px-4 py-1.5 rounded-xl bg-coquette-burgundy text-white">Lưu Habit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- VISION PIN MODAL -->
+    <div id="modalVision" class="fixed inset-0 modal-bg z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-coquette-lace dark:bg-coquette-softDark border-2 border-coquette-gold rounded-2xl p-6 max-w-md w-full shadow-2xl relative">
+            <h3 class="font-playfair font-bold text-lg text-coquette-burgundy dark:text-coquette-pink mb-3">Thêm Vision Pin</h3>
+            <form onsubmit="saveVisionPinItem(event)" class="space-y-3 text-xs">
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Tiêu đề / Caption</label>
+                    <input type="text" id="vpTitle" placeholder="Dream Room..." class="w-full px-3.5 py-1.5 rounded-lg bg-white dark:bg-coquette-cardDark border border-coquette-deepPink/40">
+                </div>
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">URL Hình ảnh *</label>
+                    <input type="url" id="vpImage" required placeholder="https://..." class="w-full px-3.5 py-1.5 rounded-lg bg-white dark:bg-coquette-cardDark border border-coquette-deepPink/40">
+                </div>
+                <div class="flex justify-end gap-2 pt-2">
+                    <button type="button" onclick="closeVisionModal()" class="px-4 py-1.5 rounded-xl bg-gray-200 text-gray-700">Hủy</button>
+                    <button type="submit" class="px-4 py-1.5 rounded-xl bg-coquette-burgundy text-white">Lưu Ghim</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- BOOK MODAL -->
+    <div id="modalBook" class="fixed inset-0 modal-bg z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-coquette-lace dark:bg-coquette-softDark border-2 border-coquette-gold rounded-2xl p-6 max-w-md w-full shadow-2xl relative">
+            <h3 class="font-playfair font-bold text-lg text-coquette-burgundy dark:text-coquette-pink mb-3">Thêm Cuốn Sách</h3>
+            <form onsubmit="saveBookItem(event)" class="space-y-3 text-xs">
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Tên sách *</label>
+                    <input type="text" id="bkTitle" required class="w-full px-3.5 py-1.5 rounded-lg bg-white dark:bg-coquette-cardDark border border-coquette-deepPink/40">
+                </div>
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Tác giả</label>
+                    <input type="text" id="bkAuthor" class="w-full px-3.5 py-1.5 rounded-lg bg-white dark:bg-coquette-cardDark border border-coquette-deepPink/40">
+                </div>
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Bìa Sách (URL)</label>
+                    <input type="url" id="bkCover" class="w-full px-3.5 py-1.5 rounded-lg bg-white dark:bg-coquette-cardDark border border-coquette-deepPink/40">
+                </div>
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Trạng thái</label>
+                    <select id="bkStatus" class="w-full px-3.5 py-1.5 rounded-lg bg-white dark:bg-coquette-cardDark border border-coquette-deepPink/40">
+                        <option value="Reading">Đang đọc</option>
+                        <option value="Completed">Đã đọc xong</option>
+                        <option value="Wishlist">Muốn đọc</option>
+                    </select>
+                </div>
+                <div class="flex justify-end gap-2 pt-2">
+                    <button type="button" onclick="closeBookModal()" class="px-4 py-1.5 rounded-xl bg-gray-200 text-gray-700">Hủy</button>
+                    <button type="submit" class="px-4 py-1.5 rounded-xl bg-coquette-burgundy text-white">Lưu Sách</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MEMORY MODAL -->
+    <div id="modalMemory" class="fixed inset-0 modal-bg z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-coquette-lace dark:bg-coquette-softDark border-2 border-coquette-gold rounded-2xl p-6 max-w-md w-full shadow-2xl relative">
+            <h3 class="font-playfair font-bold text-lg text-coquette-burgundy dark:text-coquette-pink mb-3">Thêm Kỷ Niệm</h3>
+            <form onsubmit="saveMemoryItem(event)" class="space-y-3 text-xs">
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Tiêu đề *</label>
+                    <input type="text" id="memTitle" required class="w-full px-3.5 py-1.5 rounded-lg bg-white dark:bg-coquette-cardDark border border-coquette-deepPink/40">
+                </div>
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">URL Hình ảnh</label>
+                    <input type="url" id="memImage" class="w-full px-3.5 py-1.5 rounded-lg bg-white dark:bg-coquette-cardDark border border-coquette-deepPink/40">
+                </div>
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Ghi chú</label>
+                    <textarea id="memNote" rows="2" class="w-full p-2.5 rounded-lg bg-white dark:bg-coquette-cardDark border border-coquette-deepPink/40"></textarea>
+                </div>
+                <div class="flex justify-end gap-2 pt-2">
+                    <button type="button" onclick="closeMemoryModal()" class="px-4 py-1.5 rounded-xl bg-gray-200 text-gray-700">Hủy</button>
+                    <button type="submit" class="px-4 py-1.5 rounded-xl bg-coquette-burgundy text-white">Lưu Kỷ Niệm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- SKILL MODAL -->
+    <div id="modalSkill" class="fixed inset-0 modal-bg z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-coquette-lace dark:bg-coquette-softDark border-2 border-coquette-gold rounded-2xl p-6 max-w-md w-full shadow-2xl relative">
+            <h3 class="font-playfair font-bold text-lg text-coquette-burgundy dark:text-coquette-pink mb-3">Thêm Kỹ Năng</h3>
+            <form onsubmit="saveSkillItem(event)" class="space-y-3 text-xs">
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Tên kỹ năng *</label>
+                    <input type="text" id="skTitle" required class="w-full px-3.5 py-1.5 rounded-lg bg-white dark:bg-coquette-cardDark border border-coquette-deepPink/40">
+                </div>
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Tiến độ (%)</label>
+                    <input type="number" id="skProgress" min="0" max="100" value="10" class="w-full px-3.5 py-1.5 rounded-lg bg-white dark:bg-coquette-cardDark border border-coquette-deepPink/40">
+                </div>
+                <div class="flex justify-end gap-2 pt-2">
+                    <button type="button" onclick="closeSkillModal()" class="px-4 py-1.5 rounded-xl bg-gray-200 text-gray-700">Hủy</button>
+                    <button type="submit" class="px-4 py-1.5 rounded-xl bg-coquette-burgundy text-white">Lưu Skill</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- TIMELINE MODAL -->
+    <div id="modalTimeline" class="fixed inset-0 modal-bg z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-coquette-lace dark:bg-coquette-softDark border-2 border-coquette-gold rounded-2xl p-6 max-w-md w-full shadow-2xl relative">
+            <h3 class="font-playfair font-bold text-lg text-coquette-burgundy dark:text-coquette-pink mb-3">Thêm Cột Mốc Growth</h3>
+            <form onsubmit="saveTimelineItem(event)" class="space-y-3 text-xs">
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Tên cột mốc *</label>
+                    <input type="text" id="tlTitle" required class="w-full px-3.5 py-1.5 rounded-lg bg-white dark:bg-coquette-cardDark border border-coquette-deepPink/40">
+                </div>
+                <div>
+                    <label class="block font-bold text-coquette-burgundy dark:text-coquette-pink mb-1">Mô tả</label>
+                    <input type="text" id="tlDesc" class="w-full px-3.5 py-1.5 rounded-lg bg-white dark:bg-coquette-cardDark border border-coquette-deepPink/40">
+                </div>
+                <div class="flex justify-end gap-2 pt-2">
+                    <button type="button" onclick="closeTimelineModal()" class="px-4 py-1.5 rounded-xl bg-gray-200 text-gray-700">Hủy</button>
+                    <button type="submit" class="px-4 py-1.5 rounded-xl bg-coquette-burgundy text-white">Lưu Cột Mốc</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toastNotification" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-coquette-burgundy text-coquette-lace px-5 py-3 rounded-2xl shadow-xl flex items-center gap-3 border border-coquette-gold">
+        <span id="toastSymbol">🌸</span>
+        <span id="toastMessage" class="text-xs font-semibold">Thông báo</span>
+    </div>
+
+    <!-- JAVASCRIPT APP CORE LOGIC -->
+    <script>
+        /* ================= EXPANDED STARTER DATABASE (HSK 1-4 & IELTS 5.5) ================= */
+        const defaultPreloadedVocab = [
+            // 🇨🇳 CHINESE HSK 1 - 4 STARTER DATA (Source: SYSTEM)
+            { id: 'zh_sys_1', lang: 'ZH', word: '爱', pinyin: 'ài', cat: 'VOCAB', level: 'HSK1', source: 'SYSTEM', meaning: 'Yêu, thương, thích', example: '我爱你。 (Tôi yêu bạn.)', partOfSpeech: 'động từ', mastered: true },
+            { id: 'zh_sys_2', lang: 'ZH', word: '帮助', pinyin: 'bāng zhù', cat: 'VOCAB', level: 'HSK2', source: 'SYSTEM', meaning: 'Giúp đỡ, hỗ trợ', example: '谢谢你的帮助。 (Cảm ơn sự giúp đỡ của bạn.)', partOfSpeech: 'động từ', mastered: false },
+            { id: 'zh_sys_3', lang: 'ZH', word: '比较', pinyin: 'bǐ jiào', cat: 'VOCAB', level: 'HSK3', source: 'SYSTEM', meaning: 'Tương đối, so sánh', example: '今天比较冷。 (Hôm nay tương đối lạnh.)', partOfSpeech: 'phó từ', mastered: false },
+            { id: 'zh_sys_4', lang: 'ZH', word: '安排', pinyin: 'ān pái', cat: 'VOCAB', level: 'HSK4', source: 'SYSTEM', meaning: 'An bài, sắp xếp, lên kế hoạch', example: '我们需要好好安排时间。 (Chúng ta cần sắp xếp thời gian hợp lý.)', partOfSpeech: 'động từ', mastered: false },
+            { id: 'zh_sys_5', lang: 'ZH', word: '保证', pinyin: 'bǎo zhèng', cat: 'VOCAB', level: 'HSK4', source: 'SYSTEM', meaning: 'Bảo đảm, cam đoan', example: '我保证按时完成。 (Tôi bảo đảm hoàn thành đúng hạn.)', partOfSpeech: 'động từ', mastered: false },
+            { id: 'zh_sys_6', lang: 'ZH', word: '复杂', pinyin: 'fù zá', cat: 'VOCAB', level: 'HSK4', source: 'SYSTEM', meaning: 'Phức tạp', example: '这个问题很复杂。 (Vấn đề này rất phức tạp.)', partOfSpeech: 'tính từ', mastered: false },
+            { id: 'zh_sys_7', lang: 'ZH', word: '适合', pinyin: 'shì hé', cat: 'VOCAB', level: 'HSK4', source: 'SYSTEM', meaning: 'Phù hợp, thích hợp', example: '这件衣服适合你。 (Bộ quần áo này phù hợp với bạn.)', partOfSpeech: 'động từ', mastered: false },
+            
+            // 🇨🇳 CHINESE IDIOMS (成语)
+            { id: 'zh_sys_i1', lang: 'ZH', word: '乱七八糟', pinyin: 'luàn qī bā zāo', cat: 'IDIOM', level: 'HSK4', source: 'SYSTEM', meaning: 'Bừa bãi, hỗn loạn, rối tung rối mù', example: '房间被弄得乱七八糟。 (Căn phòng bị làm cho rối tung rối mù.)', partOfSpeech: 'thành ngữ', mastered: false },
+            { id: 'zh_sys_i2', lang: 'ZH', word: '莫名其妙', pinyin: 'mò míng qí miào', cat: 'IDIOM', level: 'HSK4', source: 'SYSTEM', meaning: 'Kỳ lạ, khó hiểu, không rõ lý do', example: '他莫名其妙地笑了。 (Anh ấy tự nhiên cười một cách khó hiểu.)', partOfSpeech: 'thành ngữ', mastered: false },
+            { id: 'zh_sys_i3', lang: 'ZH', word: '井井有条', pinyin: 'jǐng jǐng yǒu tiáo', cat: 'IDIOM', level: 'HSK4', source: 'SYSTEM', meaning: 'Gọn gàng, đâu vào đấy, ngăn nắp', example: '她把资料整理得井井有条。 (Cô ấy sắp xếp tài liệu đâu vào đấy.)', partOfSpeech: 'thành ngữ', mastered: true },
+
+            // 🇬🇧 ENGLISH IELTS 5.5 / B1-B2 STARTER DATA (Source: SYSTEM)
+            { id: 'en_sys_1', lang: 'EN', word: 'Ambitious', pinyin: '/æmˈbɪʃ.əs/', cat: 'VOCAB', level: 'IELTS 5.5', source: 'SYSTEM', meaning: 'Tham vọng, có hoài bão lớn', example: 'She is an ambitious student who aims for high marks. (Cô ấy là một học sinh đầy tham vọng hướng tới điểm số cao.)', partOfSpeech: 'adjective', mastered: false },
+            { id: 'en_sys_2', lang: 'EN', word: 'Beneficial', pinyin: '/ˌben.əˈfɪʃ.əl/', cat: 'VOCAB', level: 'IELTS 5.5', source: 'SYSTEM', meaning: 'Có lợi, bổ ích', example: 'Exercise is beneficial to physical health. (Tập thể dục có lợi cho sức khỏe thể chất.)', partOfSpeech: 'adjective', mastered: false },
+            { id: 'en_sys_3', lang: 'EN', word: 'Comprehensive', pinyin: '/ˌkɒm.prɪˈhen.sɪv/', cat: 'VOCAB', level: 'IELTS 5.5', source: 'SYSTEM', meaning: 'Toàn diện, bao quát', example: 'The book gives a comprehensive view of history. (Cuốn sách cung cấp cái nhìn toàn diện về lịch sử.)', partOfSpeech: 'adjective', mastered: false },
+            { id: 'en_sys_4', lang: 'EN', word: 'Diverse', pinyin: '/daɪˈvɜːs/', cat: 'VOCAB', level: 'IELTS 5.5', source: 'SYSTEM', meaning: 'Đa dạng, phong phú', example: 'The city has a diverse population. (Thành phố có dân cư đa dạng.)', partOfSpeech: 'adjective', mastered: false },
+            { id: 'en_sys_5', lang: 'EN', word: 'Enhance', pinyin: '/ɪnˈhɑːns/', cat: 'VOCAB', level: 'IELTS 5.5', source: 'SYSTEM', meaning: 'Nâng cao, cải thiện', example: 'Reading helps enhance language skills. (Đọc sách giúp nâng cao kỹ năng ngôn ngữ.)', partOfSpeech: 'verb', mastered: true },
+            { id: 'en_sys_6', lang: 'EN', word: 'Fundamental', pinyin: '/ˌfʌn.dəˈmen.təl/', cat: 'VOCAB', level: 'IELTS 5.5', source: 'SYSTEM', meaning: 'Cơ bản, cốt lõi', example: 'Education is a fundamental human right. (Giáo dục là một quyền cơ bản của con người.)', partOfSpeech: 'adjective', mastered: false },
+
+            // 🇬🇧 ENGLISH IDIOMS
+            { id: 'en_sys_i1', lang: 'EN', word: 'Break the ice', pinyin: 'phrase', cat: 'IDIOM', level: 'IELTS 5.5', source: 'SYSTEM', meaning: 'Phá tan bầu không khí ngượng ngùng ban đầu', example: 'A friendly smile helps break the ice. (Một nụ cười thân thiện giúp phá tan sự ngại ngùng.)', partOfSpeech: 'idiom', mastered: false },
+            { id: 'en_sys_i2', lang: 'EN', word: 'Piece of cake', pinyin: 'phrase', cat: 'IDIOM', level: 'IELTS 5.5', source: 'SYSTEM', meaning: 'Dễ như ăn bánh, rất dễ dàng', example: 'The vocabulary quiz was a piece of cake. (Bài kiểm tra từ vựng dễ như ăn bánh.)', partOfSpeech: 'idiom', mastered: true },
+            { id: 'en_sys_i3', lang: 'EN', word: 'Burn the midnight oil', pinyin: 'phrase', cat: 'IDIOM', level: 'IELTS 5.5', source: 'SYSTEM', meaning: 'Thức khuya học tập / làm việc', example: 'She burned the midnight oil to prepare for exams. (Cô ấy thức khuya để ôn thi.)', partOfSpeech: 'idiom', mastered: false }
+        ];
+
+        /* ================= STATE & APP DATA INITIALIZATION ================= */
+        const APP_STORAGE_KEY = 'MyLittleUniverse_Data_v3';
+
+        const defaultData = {
+            apiKey: '',
+            currentAcademyLang: 'ZH',
+            currentSubCategory: 'VOCAB',
+            vocab: defaultPreloadedVocab,
+            timerLogs: [],
+            goals: [
+                { id: 'g1', cat: 'Education', title: 'Hoàn thành từ vựng HSK4 & IELTS 5.5', reason: 'Nâng cao trình độ ngôn ngữ tự tin' },
+                { id: 'g2', cat: 'Reading', title: 'Đọc hết 12 cuốn sách classic', reason: 'Bồi dưỡng tâm hồn thanh lịch' }
+            ],
+            visionPins: [
+                { id: 'vp1', title: 'Soft Royal Corner', image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=500' }
+            ],
+            habits: [
+                { id: 'h1', title: 'Học 20 từ vựng tiếng Trung', checks: [true, true, false, true, true, false, false] },
+                { id: 'h2', title: 'Đọc sách 15 phút', checks: [true, false, true, true, true, true, false] }
+            ],
+            journals: [
+                { id: 'j1', cat: 'Daily', mood: '🌸', title: 'Một ngày dịu dàng', date: '2026-10-28', body: 'Hôm nay mình đã tự động tạo từ vựng bằng AI và duy trì thói quen học tập.' }
+            ],
+            books: [
+                { id: 'b1', title: 'Pride and Prejudice', author: 'Jane Austen', cover: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400', status: 'Reading' }
+            ],
+            memories: [
+                { id: 'm1', title: 'Góc học tập cá nhân', image: 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=500', note: 'Góc nhỏ bình yên nhất' }
+            ],
+            skills: [
+                { id: 's1', title: 'Giao tiếp tiếng Trung HSK4', progress: 65 }
+            ],
+            timeline: [
+                { id: 't1', title: 'Nâng cấp My Little Universe', desc: 'Tích hợp Gemini AI Auto-Fill & Kho từ vựng chuẩn' }
+            ],
+            reflection: { proud: '', lesson: '', priority: '' },
+            quizHistory: []
+        };
+
+        let appData = loadAppData();
+        let currentPage = 1;
+        const PAGE_SIZE = 12;
+
+        function loadAppData() {
+            try {
+                const stored = localStorage.getItem(APP_STORAGE_KEY);
+                if (stored) {
+                    const parsed = JSON.parse(stored);
+                    if (!parsed.vocab || parsed.vocab.length === 0) parsed.vocab = defaultPreloadedVocab;
+                    return parsed;
+                }
+                return defaultData;
+            } catch (e) {
+                return defaultData;
+            }
+        }
+
+        function saveData() {
+            localStorage.setItem(APP_STORAGE_KEY, JSON.stringify(appData));
+            updateDashboardProgress();
+        }
+
+        /* ================= THEME & SYSTEM TOGGLES ================= */
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            if (html.classList.contains('light')) {
+                html.classList.remove('light');
+                html.classList.add('dark');
+                document.getElementById('themeIcon').className = 'fa-solid fa-sun text-coquette-gold';
+            } else {
+                html.classList.remove('dark');
+                html.classList.add('light');
+                document.getElementById('themeIcon').className = 'fa-solid fa-moon';
+            }
+        }
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.className = 'nav-btn flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl whitespace-nowrap transition bg-white/60 dark:bg-coquette-cardDark text-coquette-burgundy dark:text-coquette-pink hover:bg-coquette-pink';
+            });
+
+            const targetSection = document.getElementById(`section-${tabId}`);
+            if (targetSection) targetSection.classList.remove('hidden');
+
+            const targetBtn = document.getElementById(`tab-${tabId}`);
+            if (targetBtn) {
+                targetBtn.className = 'nav-btn active-tab flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl whitespace-nowrap transition bg-coquette-burgundy text-white shadow';
+            }
+        }
+
+        /* ================= DASHBOARD DYNAMIC COMPUTATIONS ================= */
+        const quotes = [
+            '"Elegance is when the inside is as beautiful as the outside."',
+            '"Your own world. Your own pace. Your own story."',
+            '"Do small things with great love and delicate poise."',
+            '"Knowledge in elegance, growth in grace."'
+        ];
+
+        function randomizeQuote() {
+            const q = quotes[Math.floor(Math.random() * quotes.length)];
+            document.getElementById('dailyQuoteText').innerText = q;
+        }
+
+        function updateDashboardProgress() {
+            const totalMins = appData.timerLogs.reduce((acc, curr) => acc + (parseInt(curr.mins) || 0), 0);
+            document.getElementById('dashTodayStudy').innerText = `${totalMins}p`;
+            document.getElementById('progTotalStudyMin').innerText = `${totalMins}p`;
+
+            const wordCount = appData.vocab.length;
+            document.getElementById('dashTotalWords').innerText = wordCount;
+            document.getElementById('progTotalWords').innerText = wordCount;
+
+            document.getElementById('progTotalBooks').innerText = appData.books.length;
+            document.getElementById('progTotalJournals').innerText = appData.journals.length;
+
+            let totalChecks = 0;
+            let doneChecks = 0;
+            appData.habits.forEach(h => {
+                h.checks.forEach(c => {
+                    totalChecks++;
+                    if (c) doneChecks++;
+                });
+            });
+            const habitPct = totalChecks > 0 ? Math.round((doneChecks / totalChecks) * 100) : 0;
+            document.getElementById('dashHabitStreak').innerText = `${habitPct}%`;
+
+            // Update API Status badge
+            const keyStatusText = document.getElementById('apiStatusText');
+            if (appData.apiKey || window.GEMINI_API_KEY) {
+                keyStatusText.innerText = 'Gemini AI Ready ✨';
+            } else {
+                keyStatusText.innerText = 'Cấu Hình Gemini AI';
+            }
+        }
+
+        /* ================= 1. GEMINI AI AUTO-FILL SYSTEM ================= */
+        function openApiKeyModal() {
+            document.getElementById('inputApiKeyVal').value = appData.apiKey || '';
+            document.getElementById('modalApiKey').classList.remove('hidden');
+        }
+        function closeApiKeyModal() { document.getElementById('modalApiKey').classList.add('hidden'); }
+        function saveApiKeyVal() {
+            appData.apiKey = document.getElementById('inputApiKeyVal').value.trim();
+            saveData();
+            closeApiKeyModal();
+            showToast('🔑 Đã lưu cấu hình Gemini API Key!');
+        }
+
+        function hideVocabAiError() {
+            document.getElementById('vocabAiErrorBanner').classList.add('hidden');
+        }
+
+        async function triggerGeminiAutoFill() {
+            hideVocabAiError();
+            const word = document.getElementById('vWord').value.trim();
+            const lang = document.getElementById('vLang').value;
+            const cat = document.getElementById('vCat').value;
+
+            if (!word) {
+                showToast('Vui lòng nhập Từ / Cụm từ gốc trước khi gọi AI.');
+                return;
+            }
+
+            const activeKey = appData.apiKey || window.GEMINI_API_KEY || '';
+            if (!activeKey) {
+                openApiKeyModal();
+                showToast('⚠️ Vui lòng cấu hình Gemini API Key để tiếp tục.');
+                return;
+            }
+
+            const btn = document.getElementById('btnAiAutoFill');
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang tạo...';
+
+            let systemPrompt = "";
+            if (lang === 'EN') {
+                systemPrompt = `Act as an expert English lexicographer for Vietnamese learners. Generate strict JSON ONLY without markdown formatting. Output Schema:
+{
+  "pinyin": "IPA phonetic transcription",
+  "partOfSpeech": "part of speech in Vietnamese e.g. danh từ, động từ, tính từ",
+  "meaning": "primary Vietnamese meaning",
+  "secondaryMeanings": "other common Vietnamese meanings",
+  "example": "Natural example sentence in English + (Vietnamese translation)",
+  "relatedWords": "word family, synonyms or antonyms",
+  "notes": "collocations, usage notes",
+  "topic": "relevant topic",
+  "level": "CEFR/IELTS level e.g. IELTS 5.5, B1"
+}`;
+            } else {
+                systemPrompt = `Act as an expert Chinese lexicographer for Vietnamese learners. Generate strict JSON ONLY without markdown formatting. Output Schema:
+{
+  "pinyin": "Pinyin with tone marks",
+  "partOfSpeech": "part of speech in Vietnamese e.g. danh từ, động từ, tính từ",
+  "meaning": "primary Vietnamese meaning",
+  "secondaryMeanings": "English equivalent or secondary meanings",
+  "example": "Chinese sentence + (Pinyin) + (Vietnamese translation)",
+  "relatedWords": "related words or Hanzi breakdown",
+  "notes": "grammar note or usage note",
+  "topic": "relevant topic",
+  "level": "HSK level e.g. HSK 1, HSK 2, HSK 3, HSK 4"
+}`;
+            }
+
+            const payload = {
+                contents: [{ parts: [{ text: `Provide dictionary data for the ${lang === 'EN' ? 'English' : 'Chinese'} term: "${word}". Category: ${cat}.` }] }],
+                systemInstruction: { parts: [{ text: systemPrompt }] }
+            };
+
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${activeKey}`;
+
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 15000); // 15s timeout
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                    signal: controller.signal
+                });
+                clearTimeout(timeoutId);
+
+                if (!response.ok) {
+                    throw new Error(`API HTTP Error ${response.status}`);
+                }
+
+                const result = await response.json();
+                const rawText = result.candidates?.[0]?.content?.parts?.[0]?.text || '';
+                const cleanedText = rawText.replace(/```json/g, '').replace(/```/g, '').trim();
+                const parsed = JSON.parse(cleanedText);
+
+                // Auto-fill form fields
+                if (parsed.pinyin) document.getElementById('vPinyin').value = parsed.pinyin;
+                if (parsed.partOfSpeech) document.getElementById('vPartOfSpeech').value = parsed.partOfSpeech;
+                if (parsed.meaning) document.getElementById('vMeaning').value = parsed.meaning;
+                if (parsed.secondaryMeanings) document.getElementById('vSecondaryMeanings').value = parsed.secondaryMeanings;
+                if (parsed.example) document.getElementById('vExample').value = parsed.example;
+                if (parsed.relatedWords) document.getElementById('vRelatedWords').value = parsed.relatedWords;
+                if (parsed.notes) document.getElementById('vNotes').value = parsed.notes;
+                if (parsed.topic) document.getElementById('vTopic').value = parsed.topic;
+                if (parsed.level) document.getElementById('vLevel').value = parsed.level;
+
+                showToast('✨ Gemini AI đã tự động hoàn tất thông tin!');
+            } catch (err) {
+                const errBanner = document.getElementById('vocabAiErrorBanner');
+                document.getElementById('vocabAiErrorMsg').innerText = `Lỗi AI: ${err.message || 'Không kết nối được'}. Bạn vẫn có thể nhập thủ công bên dưới.`;
+                errBanner.classList.remove('hidden');
+                showToast('⚠️ Lỗi gọi AI. Hãy kiểm tra Key hoặc nhập thủ công.');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fa-solid fa-wand-magic-sparkles"></i> 🤖 Tạo bằng AI';
+            }
+        }
+
+        /* ================= 2. STUDY ACADEMY & FILTERING & PAGINATION ================= */
+        let currentFlashcardIdx = 0;
+
+        function switchAcademyLang(lang) {
+            appData.currentAcademyLang = lang;
+            document.getElementById('acadBtnZH').className = lang === 'ZH' ? 'px-4 py-2 rounded-xl text-xs font-bold transition bg-coquette-burgundy text-white shadow' : 'px-4 py-2 rounded-xl text-xs font-bold transition bg-white/70 dark:bg-coquette-softDark text-coquette-burgundy dark:text-coquette-pink';
+            document.getElementById('acadBtnEN').className = lang === 'EN' ? 'px-4 py-2 rounded-xl text-xs font-bold transition bg-coquette-burgundy text-white shadow' : 'px-4 py-2 rounded-xl text-xs font-bold transition bg-white/70 dark:bg-coquette-softDark text-coquette-burgundy dark:text-coquette-pink';
+            resetPageAndRender();
+        }
+
+        function switchStudySubCategory(subCat) {
+            appData.currentSubCategory = subCat;
+            document.getElementById('subCatBtnVocab').className = subCat === 'VOCAB' ? 'px-5 py-2 rounded-xl text-xs font-bold transition bg-coquette-rose text-white shadow' : 'px-5 py-2 rounded-xl text-xs font-bold transition bg-white/80 dark:bg-coquette-cardDark text-coquette-burgundy dark:text-coquette-pink hover:bg-coquette-pink';
+            document.getElementById('subCatBtnIdiom').className = subCat === 'IDIOM' ? 'px-5 py-2 rounded-xl text-xs font-bold transition bg-coquette-rose text-white shadow' : 'px-5 py-2 rounded-xl text-xs font-bold transition bg-white/80 dark:bg-coquette-cardDark text-coquette-burgundy dark:text-coquette-pink hover:bg-coquette-pink';
+            document.getElementById('flashcardConsoleTitle').innerText = subCat === 'VOCAB' ? '🎴 Thẻ Flashcard Từ Vựng' : '✨ Thẻ Flashcard Thành Ngữ & Idioms';
+            resetPageAndRender();
+        }
+
+        function resetPageAndRender() {
+            currentPage = 1;
+            renderStudyVocabList();
+        }
+
+        function clearStudyFilters() {
+            document.getElementById('studySearchInput').value = '';
+            document.getElementById('filterSourceSelect').value = 'ALL';
+            document.getElementById('filterLevelSelect').value = 'ALL';
+            document.getElementById('filterMemorySelect').value = 'ALL';
+            resetPageAndRender();
+        }
+
+        function getFilteredVocabList() {
+            const query = (document.getElementById('studySearchInput').value || '').toLowerCase();
+            const sourceFilter = document.getElementById('filterSourceSelect').value;
+            const levelFilter = document.getElementById('filterLevelSelect').value;
+            const memoryFilter = document.getElementById('filterMemorySelect').value;
+
+            return appData.vocab.filter(v => {
+                if (v.lang !== appData.currentAcademyLang) return false;
+                if (v.cat !== appData.currentSubCategory) return false;
+                if (sourceFilter !== 'ALL' && (v.source || 'USER') !== sourceFilter) return false;
+                if (levelFilter !== 'ALL' && (v.level || '').toUpperCase() !== levelFilter.toUpperCase()) return false;
+                if (memoryFilter === 'LEARNING' && v.mastered) return false;
+                if (memoryFilter === 'MASTERED' && !v.mastered) return false;
+                if (query && !v.word.toLowerCase().includes(query) && !v.meaning.toLowerCase().includes(query) && !(v.pinyin || '').toLowerCase().includes(query)) return false;
+                return true;
+            });
+        }
+
+        function renderStudyVocabList() {
+            const filtered = getFilteredVocabList();
+            const container = document.getElementById('studyVocabList');
+            container.innerHTML = '';
+
+            const totalPages = Math.ceil(filtered.length / PAGE_SIZE) || 1;
+            if (currentPage > totalPages) currentPage = totalPages;
+
+            const startIndex = (currentPage - 1) * PAGE_SIZE;
+            const pageItems = filtered.slice(startIndex, startIndex + PAGE_SIZE);
+
+            document.getElementById('vocabPageCounter').innerText = `Trang ${currentPage} / ${totalPages} (${filtered.length} từ)`;
+
+            if (pageItems.length === 0) {
+                container.innerHTML = `<div class="col-span-2 text-center text-xs font-cormorant italic text-coquette-rose py-8">Không tìm thấy từ vựng khớp với bộ lọc. Hãy nhấn "+ Thêm Từ Vựng / AI Auto-Fill" để tạo mới!</div>`;
+            } else {
+                pageItems.forEach(v => {
+                    const isSystem = v.source === 'SYSTEM';
+                    const card = document.createElement('div');
+                    card.className = 'coquette-card p-4 relative group hover:border-coquette-gold transition space-y-1.5';
+                    card.innerHTML = `
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="flex gap-1.5 items-center">
+                                    <span class="text-[9px] font-bold px-2 py-0.5 rounded-full ${isSystem ? 'bg-coquette-goldLight text-coquette-burgundy' : 'bg-coquette-pink text-coquette-burgundy'}">${isSystem ? '[System]' : '[User]'}</span>
+                                    <span class="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-white/80 dark:bg-coquette-softDark text-coquette-rose">${v.level || 'Custom'}</span>
+                                    ${v.mastered ? '<span class="text-xs">🌟</span>' : ''}
+                                </div>
+                                <h4 class="font-playfair text-lg font-bold text-coquette-burgundy dark:text-coquette-pink mt-1">${v.word}</h4>
+                                <p class="text-xs text-coquette-rose italic font-cormorant">${v.pinyin || ''}</p>
+                            </div>
+                            <div class="flex gap-1 opacity-0 group-hover:opacity-100 transition">
+                                <button onclick="editVocabItem('${v.id}')" class="text-xs text-coquette-burgundy dark:text-coquette-pink p-1"><i class="fa-solid fa-pen-to-square"></i></button>
+                                <button onclick="deleteVocabItem('${v.id}')" class="text-xs text-red-500 p-1"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <p class="text-xs font-semibold text-coquette-burgundy dark:text-coquette-pink">${v.meaning}</p>
+                        ${v.example ? `<p class="text-[11px] text-coquette-charcoal/90 dark:text-coquette-pink/80 italic bg-white/60 dark:bg-coquette-softDark/60 p-2 rounded-lg border border-coquette-deepPink/20">${v.example}</p>` : ''}
+                    `;
+                    container.appendChild(card);
+                });
+            }
+
+            renderFlashcardConsole(filtered);
+        }
+
+        function changeVocabPage(delta) {
+            currentPage += delta;
+            renderStudyVocabList();
+        }
+
+        function renderFlashcardConsole(filteredList) {
+            const list = filteredList || getFilteredVocabList();
+            if (list.length === 0) {
+                document.getElementById('fcFrontWord').innerText = 'Trống';
+                document.getElementById('fcFrontPinyin').innerText = '';
+                document.getElementById('fcBackMeaning').innerText = 'Chưa có từ vựng nào';
+                document.getElementById('fcBackExample').innerText = '';
+                document.getElementById('fcBackExtra').innerText = '';
+                document.getElementById('fcCardCounter').innerText = '0 / 0';
+                return;
+            }
+
+            if (currentFlashcardIdx >= list.length) currentFlashcardIdx = 0;
+            if (currentFlashcardIdx < 0) currentFlashcardIdx = list.length - 1;
+
+            const item = list[currentFlashcardIdx];
+            document.getElementById('fcLangTag').innerText = item.level || (item.lang === 'ZH' ? 'HSK' : 'IELTS');
+            document.getElementById('fcSourceTag').innerText = item.source === 'SYSTEM' ? '[System]' : '[User]';
+            document.getElementById('fcFrontWord').innerText = item.word;
+            document.getElementById('fcFrontPinyin').innerText = item.pinyin || '';
+            document.getElementById('fcBackMeaning').innerText = item.meaning;
+            document.getElementById('fcBackExample').innerText = item.example || '';
+            document.getElementById('fcBackExtra').innerText = item.partOfSpeech ? `Part of Speech: ${item.partOfSpeech}` : '';
+            document.getElementById('fcCardCounter').innerText = `${currentFlashcardIdx + 1} / ${list.length}`;
+
+            const btnMastered = document.getElementById('btnToggleMastered');
+            if (item.mastered) {
+                btnMastered.innerText = '🌟 Đã Thuộc (Nhấn để bỏ đánh dấu)';
+                btnMastered.className = 'w-full py-2 rounded-xl text-xs font-bold border transition bg-coquette-gold text-coquette-burgundy border-coquette-gold';
+            } else {
+                btnMastered.innerText = '📖 Đánh dấu Đã Thuộc';
+                btnMastered.className = 'w-full py-2 rounded-xl text-xs font-bold border transition border-coquette-gold bg-white dark:bg-coquette-softDark text-coquette-burgundy dark:text-coquette-pink';
+            }
+        }
+
+        function flipFlashcardCard() {
+            document.getElementById('flashcardInnerBox').classList.toggle('rotate-y-180');
+        }
+
+        function nextFlashcardItem() {
+            document.getElementById('flashcardInnerBox').classList.remove('rotate-y-180');
+            currentFlashcardIdx++;
+            renderFlashcardConsole();
+        }
+
+        function prevFlashcardItem() {
+            document.getElementById('flashcardInnerBox').classList.remove('rotate-y-180');
+            currentFlashcardIdx--;
+            renderFlashcardConsole();
+        }
+
+        function toggleCurrentWordMastered() {
+            const list = getFilteredVocabList();
+            if (list.length === 0) return;
+            const item = list[currentFlashcardIdx];
+            item.mastered = !item.mastered;
+            saveData();
+            renderStudyVocabList();
+            showToast(item.mastered ? '🌟 Đã đánh dấu từ thuộc bài!' : '📖 Đã chuyển về trạng thái đang học.');
+        }
+
+        function speakCurrentWord() {
+            const word = document.getElementById('fcFrontWord').innerText;
+            if (!word || word === 'Trống') return;
+            const msg = new SpeechSynthesisUtterance(word);
+            msg.lang = appData.currentAcademyLang === 'ZH' ? 'zh-CN' : 'en-US';
+            window.speechSynthesis.speak(msg);
+        }
+
+        /* ================= 3. QUIZ ENGINE ================= */
+        let activeQuizItems = [];
+        let currentQuizIndex = 0;
+        let quizScore = 0;
+        let activeQuizType = 'MCQ';
+
+        function startQuizEngine() {
+            const src = document.getElementById('quizSourceSelect').value;
+            const count = parseInt(document.getElementById('quizCountSelect').value) || 10;
+            activeQuizType = document.querySelector('input[name="quizType"]:checked').value;
+
+            const [lang, cat] = src.split('_');
+            let pool = appData.vocab.filter(v => v.lang === lang && v.cat === cat);
+
+            if (pool.length < 4) {
+                showToast('Cần ít nhất 4 từ trong mục này để tạo bài khảo.');
+                return;
+            }
+
+            activeQuizItems = pool.sort(() => 0.5 - Math.random()).slice(0, count);
+            currentQuizIndex = 0;
+            quizScore = 0;
+
+            document.getElementById('quizConfigBox').classList.add('hidden');
+            document.getElementById('quizResultBox').classList.add('hidden');
+            document.getElementById('quizRunningBox').classList.remove('hidden');
+
+            renderQuizQuestion();
+        }
+
+        function renderQuizQuestion() {
+            if (currentQuizIndex >= activeQuizItems.length) {
+                finishQuizEngine();
+                return;
+            }
+
+            const item = activeQuizItems[currentQuizIndex];
+            document.getElementById('quizProgressBadge').innerText = `Câu ${currentQuizIndex + 1} / ${activeQuizItems.length}`;
+            document.getElementById('quizQuestionWord').innerText = item.word;
+            document.getElementById('quizQuestionSub').innerText = item.pinyin ? `Phiên âm: ${item.pinyin}` : '';
+
+            if (activeQuizType === 'MCQ') {
+                document.getElementById('quizMcqOptions').classList.remove('hidden');
+                document.getElementById('quizInputOptions').classList.add('hidden');
+
+                const wrongPool = appData.vocab.filter(v => v.meaning !== item.meaning).sort(() => 0.5 - Math.random()).slice(0, 3);
+                const options = [item, ...wrongPool].sort(() => 0.5 - Math.random());
+
+                const container = document.getElementById('quizMcqOptions');
+                container.innerHTML = '';
+                options.forEach(opt => {
+                    const btn = document.createElement('button');
+                    btn.className = 'p-3 rounded-xl border border-coquette-deepPink/30 bg-white/80 dark:bg-coquette-softDark text-xs font-semibold text-coquette-burgundy dark:text-coquette-pink hover:bg-coquette-pink/50 transition text-left';
+                    btn.innerText = opt.meaning;
+                    btn.onclick = () => submitQuizMcqAnswer(opt.meaning === item.meaning);
+                    container.appendChild(btn);
+                });
+            } else {
+                document.getElementById('quizMcqOptions').classList.add('hidden');
+                document.getElementById('quizInputOptions').classList.remove('hidden');
+                document.getElementById('quizTextInput').value = '';
+            }
+        }
+
+        function submitQuizMcqAnswer(isCorrect) {
+            if (isCorrect) quizScore++;
+            currentQuizIndex++;
+            renderQuizQuestion();
+        }
+
+        function submitQuizInputAnswer() {
+            const userVal = (document.getElementById('quizTextInput').value || '').trim().toLowerCase();
+            const correctVal = activeQuizItems[currentQuizIndex].meaning.toLowerCase();
+
+            if (userVal && (correctVal.includes(userVal) || userVal.includes(correctVal))) {
+                quizScore++;
+            }
+            currentQuizIndex++;
+            renderQuizQuestion();
+        }
+
+        function finishQuizEngine() {
+            document.getElementById('quizRunningBox').classList.add('hidden');
+            document.getElementById('quizResultBox').classList.remove('hidden');
+            
+            const pct = Math.round((quizScore / activeQuizItems.length) * 100);
+            document.getElementById('quizScoreDisplay').innerText = `${quizScore} / ${activeQuizItems.length} (${pct}%)`;
+            
+            appData.quizHistory.push({
+                date: new Date().toLocaleDateString('vi-VN'),
+                score: quizScore,
+                total: activeQuizItems.length
+            });
+            saveData();
+        }
+
+        function resetQuizToConfig() {
+            document.getElementById('quizResultBox').classList.add('hidden');
+            document.getElementById('quizConfigBox').classList.remove('hidden');
+        }
+
+        /* ================= 4. STUDY TIMER ================= */
+        let timerInterval = null;
+        let timerSeconds = 25 * 60;
+        let isTimerRunning = false;
+        let timerMode = 'pomo';
+
+        function setTimerType(mode) {
+            timerMode = mode;
+            clearInterval(timerInterval);
+            isTimerRunning = false;
+            document.getElementById('btnStartTimer').innerHTML = '<i class="fa-solid fa-play mr-1"></i> Bắt đầu';
+
+            if (mode === 'pomo') timerSeconds = 25 * 60;
+            else if (mode === 'short') timerSeconds = 5 * 60;
+            else timerSeconds = 0;
+
+            updateTimerClockDisplay();
+        }
+
+        function updateTimerClockDisplay() {
+            const m = Math.floor(timerSeconds / 60).toString().padStart(2, '0');
+            const s = (timerSeconds % 60).toString().padStart(2, '0');
+            document.getElementById('timerClockDisplay').innerText = `${m}:${s}`;
+        }
+
+        function toggleStudyTimer() {
+            if (isTimerRunning) {
+                clearInterval(timerInterval);
+                isTimerRunning = false;
+                document.getElementById('btnStartTimer').innerHTML = '<i class="fa-solid fa-play mr-1"></i> Bắt đầu';
+            } else {
+                isTimerRunning = true;
+                document.getElementById('btnStartTimer').innerHTML = '<i class="fa-solid fa-pause mr-1"></i> Tạm dừng';
+                timerInterval = setInterval(() => {
+                    if (timerMode === 'stopwatch') {
+                        timerSeconds++;
+                    } else {
+                        if (timerSeconds > 0) timerSeconds--;
+                        else {
+                            clearInterval(timerInterval);
+                            isTimerRunning = false;
+                            showToast('🎉 Hoàn thành phiên học!');
+                            logTimerSession();
+                        }
+                    }
+                    updateTimerClockDisplay();
+                }, 1000);
+            }
+        }
+
+        function resetStudyTimer() {
+            clearInterval(timerInterval);
+            isTimerRunning = false;
+            setTimerType(timerMode);
+        }
+
+        function logTimerSession() {
+            const subj = document.getElementById('timerSubjectInput').value || 'Học ngôn ngữ';
+            const mins = timerMode === 'stopwatch' ? Math.ceil(timerSeconds / 60) : (timerMode === 'pomo' ? 25 : 5);
+            appData.timerLogs.push({ id: Date.now().toString(), subj, mins, date: new Date().toLocaleDateString('vi-VN') });
+            saveData();
+            renderTimerLogs();
+        }
+
+        function renderTimerLogs() {
+            const container = document.getElementById('timerHistoryLogs');
+            container.innerHTML = '';
+            if (appData.timerLogs.length === 0) {
+                container.innerHTML = `<div class="text-xs text-coquette-rose italic text-center py-4">Chưa có lịch sử phiên học.</div>`;
+                return;
+            }
+            appData.timerLogs.slice().reverse().forEach(log => {
+                const item = document.createElement('div');
+                item.className = 'p-2.5 rounded-xl bg-white/70 dark:bg-coquette-softDark text-xs flex justify-between items-center border border-coquette-deepPink/20';
+                item.innerHTML = `
+                    <div>
+                        <span class="font-bold text-coquette-burgundy dark:text-coquette-pink block">${log.subj}</span>
+                        <span class="text-[10px] text-coquette-rose">${log.date}</span>
+                    </div>
+                    <span class="font-playfair font-bold text-coquette-gold">+${log.mins}p</span>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        function clearTimerHistoryData() {
+            appData.timerLogs = [];
+            saveData();
+            renderTimerLogs();
+        }
+
+        /* ================= 5. GOALS & VISION BOARD ================= */
+        function switchGoalsSubTab(sub) {
+            document.getElementById('areaLifeGoals').classList.toggle('hidden', sub !== 'life');
+            document.getElementById('areaVisionBoard').classList.toggle('hidden', sub !== 'vision');
+        }
+
+        function renderLifeGoals() {
+            const container = document.getElementById('lifeGoalsList');
+            container.innerHTML = '';
+            if (appData.goals.length === 0) {
+                container.innerHTML = `<div class="col-span-2 text-xs italic text-coquette-rose text-center py-6">Chưa có mục tiêu nào được tạo.</div>`;
+                return;
+            }
+            appData.goals.forEach(g => {
+                const card = document.createElement('div');
+                card.className = 'coquette-card p-4 relative space-y-2';
+                card.innerHTML = `
+                    <div class="flex justify-between items-start">
+                        <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-coquette-pink text-coquette-burgundy">${g.cat}</span>
+                        <button onclick="deleteGoalItem('${g.id}')" class="text-coquette-rose hover:text-red-500 text-xs"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <h4 class="font-playfair text-base font-bold text-coquette-burgundy dark:text-coquette-pink">${g.title}</h4>
+                    <p class="text-xs font-cormorant italic text-coquette-rose">Reason: ${g.reason || 'N/A'}</p>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function renderVisionPins() {
+            const container = document.getElementById('visionPinGrid');
+            container.innerHTML = '';
+            appData.visionPins.forEach(vp => {
+                const pin = document.createElement('div');
+                pin.className = 'coquette-card p-3 space-y-2 text-center group relative';
+                pin.innerHTML = `
+                    <img src="${vp.image}" class="w-full h-48 object-cover rounded-xl border border-coquette-gold/30">
+                    <h4 class="font-playfair text-xs font-bold text-coquette-burgundy dark:text-coquette-pink mt-1">${vp.title || 'Untitled'}</h4>
+                    <button onclick="deleteVisionPinItem('${vp.id}')" class="text-xs text-red-400 absolute top-4 right-4 bg-white/80 p-1.5 rounded-full opacity-0 group-hover:opacity-100 transition"><i class="fa-solid fa-trash"></i></button>
+                `;
+                container.appendChild(pin);
+            });
+        }
+
+        /* ================= 6. HABITS TRACKER ================= */
+        function renderHabitsMatrix() {
+            const tbody = document.getElementById('habitsTableBody');
+            tbody.innerHTML = '';
+            appData.habits.forEach((h, hIdx) => {
+                const tr = document.createElement('tr');
+                tr.className = 'border-b border-coquette-deepPink/20';
+                
+                let checksHtml = '';
+                h.checks.forEach((c, dayIdx) => {
+                    checksHtml += `
+                        <td class="py-2.5 px-1 text-center">
+                            <input type="checkbox" ${c ? 'checked' : ''} onchange="toggleHabitCheck(${hIdx}, ${dayIdx})" class="w-4 h-4 accent-coquette-burgundy cursor-pointer">
+                        </td>
+                    `;
+                });
+
+                tr.innerHTML = `
+                    <td class="py-2.5 px-3 font-semibold text-coquette-burgundy dark:text-coquette-pink">${h.title}</td>
+                    ${checksHtml}
+                    <td class="py-2.5 px-3 text-right">
+                        <button onclick="deleteHabitItem('${h.id}')" class="text-coquette-rose hover:text-red-500 text-xs"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function toggleHabitCheck(hIdx, dayIdx) {
+            appData.habits[hIdx].checks[dayIdx] = !appData.habits[hIdx].checks[dayIdx];
+            saveData();
+        }
+
+        /* ================= 7. JOURNAL ================= */
+        let selectedMood = '🌸';
+
+        function selectJournalMood(m) {
+            selectedMood = m;
+            showToast(`Đã chọn mood: ${m}`);
+        }
+
+        function checkJournalCategoryChange() {
+            const val = document.getElementById('journalCategorySelect').value;
+            document.getElementById('futureLockDateBox').classList.toggle('hidden', val !== 'FutureLetter');
+        }
+
+        function saveJournalEntryData() {
+            const title = document.getElementById('journalTitleInput').value;
+            const body = document.getElementById('journalBodyInput').value;
+            const cat = document.getElementById('journalCategorySelect').value;
+
+            if (!title || !body) {
+                showToast('Vui lòng nhập đầy đủ tiêu đề và nội dung nhật ký.');
+                return;
+            }
+
+            appData.journals.push({
+                id: Date.now().toString(),
+                cat,
+                mood: selectedMood,
+                title,
+                body,
+                date: new Date().toLocaleDateString('vi-VN')
+            });
+
+            document.getElementById('journalTitleInput').value = '';
+            document.getElementById('journalBodyInput').value = '';
+            saveData();
+            renderJournalHistory();
+            showToast('🌸 Nhật ký đã được lưu giữ!');
+        }
+
+        function renderJournalHistory() {
+            const container = document.getElementById('journalEntriesList');
+            container.innerHTML = '';
+            if (appData.journals.length === 0) {
+                container.innerHTML = `<div class="text-xs text-coquette-rose italic text-center py-4">Chưa có bài viết nhật ký nào.</div>`;
+                return;
+            }
+            appData.journals.slice().reverse().forEach(j => {
+                const card = document.createElement('div');
+                card.className = 'p-3 rounded-xl bg-white/70 dark:bg-coquette-softDark text-xs border border-coquette-deepPink/20 space-y-1 relative group';
+                card.innerHTML = `
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-coquette-burgundy dark:text-coquette-pink">${j.mood} ${j.title}</span>
+                        <button onclick="deleteJournalItem('${j.id}')" class="text-coquette-rose hover:text-red-500 opacity-0 group-hover:opacity-100 transition"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <span class="text-[10px] text-coquette-rose block font-cormorant">${j.cat} • ${j.date}</span>
+                    <p class="text-[11px] text-coquette-charcoal dark:text-coquette-pink/80 line-clamp-2 mt-1">${j.body}</p>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        /* ================= 8. MEMORIES & BOOKSHELF ================= */
+        function switchMemoriesSubTab(sub) {
+            document.getElementById('areaMemoryScrapbook').classList.toggle('hidden', sub !== 'scrapbook');
+            document.getElementById('areaBookshelf').classList.toggle('hidden', sub !== 'bookshelf');
+        }
+
+        function renderMemoriesScrapbook() {
+            const container = document.getElementById('memoriesGrid');
+            container.innerHTML = '';
+            appData.memories.forEach(m => {
+                const card = document.createElement('div');
+                card.className = 'coquette-card p-3 space-y-2 text-center group relative';
+                card.innerHTML = `
+                    <img src="${m.image || 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=500'}" class="w-full h-40 object-cover rounded-xl border border-coquette-gold/30">
+                    <h4 class="font-playfair text-xs font-bold text-coquette-burgundy dark:text-coquette-pink mt-1">${m.title}</h4>
+                    <p class="text-[11px] text-coquette-rose font-cormorant italic">${m.note || ''}</p>
+                    <button onclick="deleteMemoryItem('${m.id}')" class="text-xs text-red-400 absolute top-4 right-4 bg-white/80 p-1.5 rounded-full opacity-0 group-hover:opacity-100 transition"><i class="fa-solid fa-trash"></i></button>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function renderBookshelf() {
+            const container = document.getElementById('bookshelfGrid');
+            container.innerHTML = '';
+            appData.books.forEach(b => {
+                const card = document.createElement('div');
+                card.className = 'coquette-card p-3 flex gap-3 items-center relative group';
+                card.innerHTML = `
+                    <img src="${b.cover || 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400'}" class="w-16 h-24 object-cover rounded-lg border border-coquette-gold/30">
+                    <div class="space-y-1 text-xs">
+                        <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-coquette-pink text-coquette-burgundy">${b.status}</span>
+                        <h4 class="font-playfair font-bold text-coquette-burgundy dark:text-coquette-pink">${b.title}</h4>
+                        <p class="text-coquette-rose font-cormorant italic text-[11px]">${b.author || 'Tác giả'}</p>
+                    </div>
+                    <button onclick="deleteBookItem('${b.id}')" class="text-xs text-coquette-rose hover:text-red-500 absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition"><i class="fa-solid fa-trash"></i></button>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        /* ================= 9. PERSONAL GROWTH ================= */
+        function renderPersonalGrowth() {
+            const skillsCont = document.getElementById('skillsList');
+            skillsCont.innerHTML = '';
+            appData.skills.forEach(s => {
+                const div = document.createElement('div');
+                div.className = 'space-y-1 text-xs';
+                div.innerHTML = `
+                    <div class="flex justify-between text-coquette-burgundy dark:text-coquette-pink font-semibold">
+                        <span>${s.title}</span>
+                        <span>${s.progress}%</span>
+                    </div>
+                    <div class="w-full h-2 rounded-full bg-coquette-pink dark:bg-coquette-cardDark overflow-hidden">
+                        <div class="h-full bg-coquette-gold" style="width: ${s.progress}%"></div>
+                    </div>
+                `;
+                skillsCont.appendChild(div);
+            });
+
+            const tlCont = document.getElementById('growthTimelineList');
+            tlCont.innerHTML = '';
+            appData.timeline.forEach(t => {
+                const div = document.createElement('div');
+                div.className = 'relative pl-6';
+                div.innerHTML = `
+                    <span class="absolute -left-[9px] top-0.5 w-4 h-4 rounded-full bg-coquette-burgundy border-2 border-white"></span>
+                    <h4 class="font-playfair text-xs font-bold text-coquette-burgundy dark:text-coquette-pink">${t.title}</h4>
+                    <p class="text-[11px] text-coquette-rose font-cormorant italic">${t.desc || ''}</p>
+                `;
+                tlCont.appendChild(div);
+            });
+        }
+
+        /* ================= MODALS CRUD LOGIC ================= */
+        function openVocabModal() {
+            document.getElementById('vEditId').value = '';
+            document.getElementById('vWord').value = '';
+            document.getElementById('vPinyin').value = '';
+            document.getElementById('vMeaning').value = '';
+            document.getElementById('vSecondaryMeanings').value = '';
+            document.getElementById('vExample').value = '';
+            document.getElementById('vPartOfSpeech').value = '';
+            document.getElementById('vRelatedWords').value = '';
+            document.getElementById('vNotes').value = '';
+            document.getElementById('vTopic').value = '';
+            document.getElementById('vLevel').value = appData.currentAcademyLang === 'ZH' ? 'HSK 4' : 'IELTS 5.5';
+            document.getElementById('vLang').value = appData.currentAcademyLang;
+            document.getElementById('vCat').value = appData.currentSubCategory;
+            document.getElementById('vocabModalTitle').innerText = 'Thêm Từ Vựng / AI Auto-Fill';
+            hideVocabAiError();
+            document.getElementById('modalVocab').classList.remove('hidden');
+        }
+
+        function closeVocabModal() { document.getElementById('modalVocab').classList.add('hidden'); }
+
+        function adjustVocabFormByLang() {
+            const lang = document.getElementById('vLang').value;
+            document.getElementById('vLevel').value = lang === 'ZH' ? 'HSK 4' : 'IELTS 5.5';
+        }
+
+        function saveVocabItem(e) {
+            e.preventDefault();
+            const editId = document.getElementById('vEditId').value;
+            const wordVal = document.getElementById('vWord').value.trim();
+            const meaningVal = document.getElementById('vMeaning').value.trim();
+
+            if (!wordVal || !meaningVal) {
+                showToast('Vui lòng nhập Từ gốc và Nghĩa tiếng Việt.');
+                return;
+            }
+
+            if (editId) {
+                const item = appData.vocab.find(v => v.id === editId);
+                if (item) {
+                    item.word = wordVal;
+                    item.lang = document.getElementById('vLang').value;
+                    item.cat = document.getElementById('vCat').value;
+                    item.pinyin = document.getElementById('vPinyin').value;
+                    item.meaning = meaningVal;
+                    item.partOfSpeech = document.getElementById('vPartOfSpeech').value;
+                    item.example = document.getElementById('vExample').value;
+                    item.level = document.getElementById('vLevel').value;
+                }
+            } else {
+                appData.vocab.unshift({
+                    id: Date.now().toString(),
+                    source: 'USER',
+                    lang: document.getElementById('vLang').value,
+                    cat: document.getElementById('vCat').value,
+                    word: wordVal,
+                    pinyin: document.getElementById('vPinyin').value,
+                    meaning: meaningVal,
+                    partOfSpeech: document.getElementById('vPartOfSpeech').value,
+                    example: document.getElementById('vExample').value,
+                    level: document.getElementById('vLevel').value,
+                    mastered: false
+                });
+            }
+
+            saveData();
+            renderStudyVocabList();
+            closeVocabModal();
+            showToast('💾 Từ vựng đã được lưu thành công vào cơ sở dữ liệu!');
+        }
+
+        function editVocabItem(id) {
+            const item = appData.vocab.find(v => v.id === id);
+            if (!item) return;
+
+            document.getElementById('vEditId').value = item.id;
+            document.getElementById('vWord').value = item.word;
+            document.getElementById('vLang').value = item.lang;
+            document.getElementById('vCat').value = item.cat;
+            document.getElementById('vPinyin').value = item.pinyin || '';
+            document.getElementById('vMeaning').value = item.meaning;
+            document.getElementById('vPartOfSpeech').value = item.partOfSpeech || '';
+            document.getElementById('vExample').value = item.example || '';
+            document.getElementById('vLevel').value = item.level || '';
+            document.getElementById('vocabModalTitle').innerText = 'Chỉnh Sửa Từ Vựng';
+            hideVocabAiError();
+            document.getElementById('modalVocab').classList.remove('hidden');
+        }
+
+        function deleteVocabItem(id) {
+            appData.vocab = appData.vocab.filter(v => v.id !== id);
+            saveData();
+            renderStudyVocabList();
+            showToast('🗑️ Đã xóa từ vựng khỏi cơ sở dữ liệu.');
+        }
+
+        function openGoalModal() { document.getElementById('modalGoal').classList.remove('hidden'); }
+        function closeGoalModal() { document.getElementById('modalGoal').classList.add('hidden'); }
+        function saveGoalItem(e) {
+            e.preventDefault();
+            appData.goals.push({
+                id: Date.now().toString(),
+                cat: document.getElementById('gCat').value,
+                title: document.getElementById('gTitle').value,
+                reason: document.getElementById('gReason').value
+            });
+            saveData();
+            renderLifeGoals();
+            closeGoalModal();
+        }
+        function deleteGoalItem(id) {
+            appData.goals = appData.goals.filter(g => g.id !== id);
+            saveData();
+            renderLifeGoals();
+        }
+
+        function openHabitModal() { document.getElementById('modalHabit').classList.remove('hidden'); }
+        function closeHabitModal() { document.getElementById('modalHabit').classList.add('hidden'); }
+        function saveHabitItem(e) {
+            e.preventDefault();
+            appData.habits.push({
+                id: Date.now().toString(),
+                title: document.getElementById('hTitle').value,
+                checks: [false, false, false, false, false, false, false]
+            });
+            saveData();
+            renderHabitsMatrix();
+            closeHabitModal();
+        }
+        function deleteHabitItem(id) {
+            appData.habits = appData.habits.filter(h => h.id !== id);
+            saveData();
+            renderHabitsMatrix();
+        }
+
+        function openVisionPinModal() { document.getElementById('modalVision').classList.remove('hidden'); }
+        function closeVisionModal() { document.getElementById('modalVision').classList.add('hidden'); }
+        function saveVisionPinItem(e) {
+            e.preventDefault();
+            appData.visionPins.push({
+                id: Date.now().toString(),
+                title: document.getElementById('vpTitle').value,
+                image: document.getElementById('vpImage').value
+            });
+            saveData();
+            renderVisionPins();
+            closeVisionModal();
+        }
+        function deleteVisionPinItem(id) {
+            appData.visionPins = appData.visionPins.filter(v => v.id !== id);
+            saveData();
+            renderVisionPins();
+        }
+
+        function openBookModal() { document.getElementById('modalBook').classList.remove('hidden'); }
+        function closeBookModal() { document.getElementById('modalBook').classList.add('hidden'); }
+        function saveBookItem(e) {
+            e.preventDefault();
+            appData.books.push({
+                id: Date.now().toString(),
+                title: document.getElementById('bkTitle').value,
+                author: document.getElementById('bkAuthor').value,
+                cover: document.getElementById('bkCover').value,
+                status: document.getElementById('bkStatus').value
+            });
+            saveData();
+            renderBookshelf();
+            closeBookModal();
+        }
+        function deleteBookItem(id) {
+            appData.books = appData.books.filter(b => b.id !== id);
+            saveData();
+            renderBookshelf();
+        }
+
+        function openMemoryModal() { document.getElementById('modalMemory').classList.remove('hidden'); }
+        function closeMemoryModal() { document.getElementById('modalMemory').classList.add('hidden'); }
+        function saveMemoryItem(e) {
+            e.preventDefault();
+            appData.memories.push({
+                id: Date.now().toString(),
+                title: document.getElementById('memTitle').value,
+                image: document.getElementById('memImage').value,
+                note: document.getElementById('memNote').value
+            });
+            saveData();
+            renderMemoriesScrapbook();
+            closeMemoryModal();
+        }
+        function deleteMemoryItem(id) {
+            appData.memories = appData.memories.filter(m => m.id !== id);
+            saveData();
+            renderMemoriesScrapbook();
+        }
+
+        function openSkillModal() { document.getElementById('modalSkill').classList.remove('hidden'); }
+        function closeSkillModal() { document.getElementById('modalSkill').classList.add('hidden'); }
+        function saveSkillItem(e) {
+            e.preventDefault();
+            appData.skills.push({
+                id: Date.now().toString(),
+                title: document.getElementById('skTitle').value,
+                progress: parseInt(document.getElementById('skProgress').value) || 0
+            });
+            saveData();
+            renderPersonalGrowth();
+            closeSkillModal();
+        }
+
+        function openTimelineModal() { document.getElementById('modalTimeline').classList.remove('hidden'); }
+        function closeTimelineModal() { document.getElementById('modalTimeline').classList.add('hidden'); }
+        function saveTimelineItem(e) {
+            e.preventDefault();
+            appData.timeline.push({
+                id: Date.now().toString(),
+                title: document.getElementById('tlTitle').value,
+                desc: document.getElementById('tlDesc').value
+            });
+            saveData();
+            renderPersonalGrowth();
+            closeTimelineModal();
+        }
+
+        function saveMonthlyReflection(e) {
+            e.preventDefault();
+            appData.reflection = {
+                proud: document.getElementById('reflProud').value,
+                lesson: document.getElementById('reflLesson').value,
+                priority: document.getElementById('reflPriority').value
+            };
+            saveData();
+            showToast('📝 Đã lưu Reflection tháng!');
+        }
+
+        function deleteJournalItem(id) {
+            appData.journals = appData.journals.filter(j => j.id !== id);
+            saveData();
+            renderJournalHistory();
+        }
+
+        function promptPasscodeLock() {
+            showToast('🔒 Mật mã nhật ký cá nhân đã kích hoạt!');
+        }
+
+        /* ================= BACKUP & EXPORT/IMPORT ================= */
+        function exportJSONBackup() {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(appData, null, 2));
+            const dlAnchorElem = document.createElement('a');
+            dlAnchorElem.setAttribute("href", dataStr);
+            dlAnchorElem.setAttribute("download", "MyLittleUniverse_Backup.json");
+            document.body.appendChild(dlAnchorElem);
+            dlAnchorElem.click();
+            dlAnchorElem.remove();
+            showToast('💾 Đã xuất file sao lưu JSON an toàn!');
+        }
+
+        function importJSONBackup(event) {
+            const fileReader = new FileReader();
+            fileReader.onload = function (e) {
+                try {
+                    const importedData = JSON.parse(e.target.result);
+                    appData = importedData;
+                    saveData();
+                    initApp();
+                    showToast('✨ Nhập sao lưu thành công!');
+                } catch (err) {
+                    showToast('Lỗi: File JSON không hợp lệ.');
+                }
+            };
+            if (event.target.files[0]) {
+                fileReader.readAsText(event.target.files[0]);
+            }
+        }
+
+        /* ================= TOAST NOTIFICATION ================= */
+        function showToast(msg) {
+            const toast = document.getElementById('toastNotification');
+            document.getElementById('toastMessage').innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        /* ================= INIT APP ================= */
+        function initApp() {
+            updateDashboardProgress();
+            renderStudyVocabList();
+            renderTimerLogs();
+            renderLifeGoals();
+            renderVisionPins();
+            renderHabitsMatrix();
+            renderJournalHistory();
+            renderMemoriesScrapbook();
+            renderBookshelf();
+            renderPersonalGrowth();
+        }
+
+        window.onload = function() {
+            initApp();
+        };
+    </script>
+</body>
+</html>
